@@ -5,9 +5,10 @@
                 Shop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?category=cardio" class="dropdown-item">Cardio</a>
+                <a href="{% url 'products' %}?category=resistance" class="dropdown-item ">Resistance</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item ">Accessories</a>
+                <a href="{% url 'products' %}?category=recovery" class="dropdown-item ">Recovery</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
