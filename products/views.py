@@ -36,7 +36,6 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -56,7 +55,6 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
-
 
 
 def product_detail(request, product_id):
