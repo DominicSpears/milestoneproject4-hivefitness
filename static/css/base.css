@@ -13,7 +13,6 @@ body {
 .hero-img {
     max-width: 100%;
     height: auto;
-    border: 2px solid black;
 }
 
 /* Container holding the image and the text */
