@@ -10,6 +10,13 @@ body {
     font-family: 'Lato';
 }
 
+.dropdown-menu {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 500px
+    
+}
+
 .hero-img {
     max-width: 100%;
     height: auto;
@@ -262,6 +269,7 @@ input[name='q']::placeholder {
     border-color: #dc3545;
     border-radius: 0;
 }
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
