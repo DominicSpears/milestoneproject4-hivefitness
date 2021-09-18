@@ -1,0 +1,1 @@
+web: gunicorn hive_fitness.wsgi:application
