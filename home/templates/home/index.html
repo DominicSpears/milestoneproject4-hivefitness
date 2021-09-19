@@ -28,7 +28,7 @@
 
     <section class="features">
       <div class="row">
-        <!--Cookware link-->
+        <!--Shop link-->
         <div class="col s12 m6 l4">
             <div class="home-card card center-align">
                 <div class="home-card-title">
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <!--Recipe link-->
+        <!--Forum link-->
         <div class="col s12 m6 l4">
             <div class="home-card card center-align">
                 <div class="home-card-title">
@@ -75,20 +75,20 @@
                 <div class="home-card-image">
                     <img src="/media/user-home.webp" class="inner-home-image" alt="laptop profile">
                 </div class="home-card-title">
-                {% if session.user %}
+                {% if request.user.is_authenticated %}
                 <div class="home-card-content">Click the link bellow to access your own unique profile page. From here you
-                    can easily view, edit or delete your own recipes. </div>
+                    can easily edit your details and review your orders. </div>
                 {% else %}
                 <div class="home-card-content">Oh no, you're not logged in! But don't worry, you can login here to access
                     your unique profile page and some exclusive features.</div>
                 {% endif %}
                 <div class="home-btn-container">
-                    {% if session.user %}
+                    {% if request.user.is_authenticated %}
                     <a href="{% url 'profile' %}" class="home-btn">
                         Visit your profile page
                     </a>
                     {% else %}
-                    <a href="{% url 'account_login' %" class="home-btn">
+                    <a href="{% url 'account_login' %}" class="home-btn">
                         Login
                     </a>
                     {% endif %}
