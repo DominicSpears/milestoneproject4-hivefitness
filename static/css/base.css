@@ -135,6 +135,7 @@ body {
 .home-card-content {
     padding: 20px 10px 0px 10px;
     min-height: 125px;
+    font-size: x-small;
 }
 
 .home-btn-container {
