@@ -170,6 +170,22 @@
         </div>
     </header>
 
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer">
+        <div class="footer-info">
+            <h6>Footer title</h6>
+            <p>Footer text</p>
+        </div>
+        <div>
+            <p class="footer-cp">Copyright 2021</p>
+        </div>
+    </footer>
+
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
@@ -187,12 +203,6 @@
             {% endfor %}
         </div>
     {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
 
     {% block postloadjs %}
     <script type="text/javascript">
