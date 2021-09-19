@@ -50,6 +50,7 @@ body {
 /*footer*/
 
 .page-footer {
+    margin-top: 50px;
     background-color: black;
     color: rgb(255, 217, 0);
 }
@@ -98,10 +99,6 @@ body {
     margin: 0;
 }
 
-.navbar-toggler {
-    color: white;
-}
-
 .main-logo-link {
     width: fit-content;
 }
@@ -110,6 +107,56 @@ body {
     background: black;
     color: white;
     min-width: 260px;
+}
+
+/*features cards*/
+
+.features {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.home-card {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    min-height: 450px;
+}
+
+.home-card-title {
+    padding: 10px;
+}
+
+.inner-home-image {
+    width: 100%;
+    height: 200px;
+    padding: 0px 20px;
+}
+
+.home-card-content {
+    padding: 20px 10px 0px 10px;
+    min-height: 125px;
+}
+
+.home-btn-container {
+    padding: 10px;
+    width: 100%;
+}
+
+.home-btn {
+    background-color: black;
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 40px;
+    border-radius: 5px;
+    color: rgb(255, 217, 0);
+    font-size: 15px;
+}
+
+.home-btn:hover {
+    background-color: rgb(255, 217, 0);
+    color: black;
 }
 
 .btn-black {

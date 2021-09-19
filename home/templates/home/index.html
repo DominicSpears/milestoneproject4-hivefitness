@@ -1,4 +1,3 @@
-  
 {% extends "base.html" %}
 {% load static %}
 
@@ -11,13 +10,95 @@
 {% endblock %}
 
 {% block content %}
-<div class="hero-container h-100">
-    <img class="hero-img" src="/media/weightbars.png" alt="Weightbar">
-    <div class="hero-text-block">
-      <h4>The new collections are here</h4>
-      <h4>
-        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-    </h4>
+    <section class="hero">
+        <div class="hero-container h-100">
+            <img class="hero-img" src="/media/weightbars.png" alt="Weightbar">
+            <div class="hero-text-block">
+              <h4>The new collections are here</h4>
+              <h4>
+              <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+              </h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+
+    </section>
+
+    <section class="features">
+      <div class="row">
+        <!--Cookware link-->
+        <div class="col s12 m6 l4">
+            <div class="home-card card center-align">
+                <div class="home-card-title">
+                    <h6>Fitness Store</h6>
+                </div>
+                <div class="home-card-image">
+                    <img src="/media/shop-home.jpg" class="inner-home-image" alt="treadmill">
+                </div>
+                <div class="home-card-content">We've worked hard to find the latest and greatest fitness equipment on the market. 
+                  This is a one stop shop for anything you made need to reach you exercise goals, from cardiovascular training, 
+                  resistance workouts or even recovery.</div>
+                <div class="home-btn-container">
+                    <a href="{% url 'products' %}" class="home-btn">
+                        View the equipment
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--Recipe link-->
+        <div class="col s12 m6 l4">
+            <div class="home-card card center-align">
+                <div class="home-card-title">
+                    <h6>Join our community</h6>
+                </div>
+                <div class="home-card-image">
+                    <img src="/media/forum-home.jpg" class="inner-home-image" alt="group exercise">
+                </div>
+                <div class="home-card-content">What sets us apart from other equipment suppliers is our community of customers. 
+                  Our forum allows you to get in touch with like minded individuals. Get inspired by reading up on success stories, reviews of our products and even discover some workout routines.
+                    Search though our vast collection located together in one convenient place.</div>
+                <div class="home-btn-container">
+                    <a href="" class="home-btn">
+                        Visit our Forum
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--Profile/login link-->
+        <div class="col s12 m6 l4">
+            <div class="home-card card center-align">
+                <div class="home-card-title">
+                    <h6>Your own profile page</h6>
+                </div>
+                <div class="home-card-image">
+                    <img src="/media/user-home.webp" class="inner-home-image" alt="laptop profile">
+                </div class="home-card-title">
+                {% if session.user %}
+                <div class="home-card-content">Click the link bellow to access your own unique profile page. From here you
+                    can easily view, edit or delete your own recipes. </div>
+                {% else %}
+                <div class="home-card-content">Oh no, you're not logged in! But don't worry, you can login here to access
+                    your unique profile page and some exclusive features.</div>
+                {% endif %}
+                <div class="home-btn-container">
+                    {% if session.user %}
+                    <a href="{% url 'profile' %}" class="home-btn">
+                        Visit your profile page
+                    </a>
+                    {% else %}
+                    <a href="{% url 'account_login' %" class="home-btn">
+                        Login
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+    </section>
+
+    <section class="contact">
+
+    </section>
 {% endblock %}
