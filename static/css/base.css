@@ -61,6 +61,14 @@ body {
     padding: 10px;
 }
 
+.footer-link {
+    color: rgb(255, 217, 0);
+}
+
+.footer-link:hover {
+    color: white;
+}
+
 .social-btn {
     font-size: large;
     padding: 0px 5px;
