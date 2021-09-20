@@ -10,7 +10,6 @@ html {
 body {
     background-color: rgb(255, 217, 0);
     background-size: cover;
-    height: calc(100vh - 10px);
     color: #555;
     font-family: 'Lato';
 }
@@ -24,7 +23,6 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     max-height: 500px
-    
 }
 
 .hero-img {
@@ -398,6 +396,6 @@ input[name='q']::placeholder {
     }
 
     body {
-        height: calc(100vh - 116px);
+        margin-top: 50px;
     }
 }
