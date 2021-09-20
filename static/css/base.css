@@ -58,11 +58,12 @@ body {
     font-size: x-small;
     color: white;
     text-align: center;
+    padding: 10px;
 }
 
 .social-btn {
     font-size: large;
-    padding: 0px 20px;
+    padding: 0px 5px;
     color: white;
 }
 
