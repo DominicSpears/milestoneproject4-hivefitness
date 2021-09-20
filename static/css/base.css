@@ -11,12 +11,18 @@ body {
     background-color: rgb(255, 217, 0);
     background-size: cover;
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Bebas Neue';
 }
 
 .header-main {
     background-color: rgb(51, 51, 51);
     color: white;
+}
+
+.mobile-nav-link {
+    font-size: xx-small;
+    border: 2px solid red;
+    margin: 0;
 }
 
 .dropdown-menu {
@@ -25,7 +31,24 @@ body {
     max-height: 500px
 }
 
-.hero-img {
+#grad1 {
+    background-color: rgb(255, 217, 0); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, rgb(182, 155, 3) , rgb(255, 217, 0));
+}
+
+.hero-text {
+    padding-top: 200px;
+}
+
+.hero-text-title {
+    font-size: 100px;
+}
+
+.hero-text-message {
+    font-size: 50px;
+}
+
+.hero-image {
     max-width: 100%;
     height: auto;
 }
@@ -53,6 +76,10 @@ body {
     color: rgb(255, 217, 0);
 }
 
+.footer-info {
+    padding: 20px;
+}
+
 .footer-copyright {
     background-color: rgb(51, 51, 51);
     font-size: x-small;
@@ -78,7 +105,6 @@ body {
 .social-btn:hover {
     color: rgb(255, 217, 0);
 }
-
 
 /* from Bulma */
 .icon {
@@ -389,7 +415,7 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 200px;
+        padding-top: 123px;
     }
 
     .extra-nav {

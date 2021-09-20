@@ -11,13 +11,21 @@
 {% endblock %}
 
 {% block content %}
-    <section class="hero">
-        <div class="hero-container h-100">
-            <img class="hero-img" src="/media/weightbars.png" alt="Weightbar">
-            <div class="hero-text-block">
-              <h3>The new collections are here</h3>
-              <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-              </h4>
+
+    <section>
+        <div id="grad1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 text-center hero-block">
+                        <div class="hero-text">
+                            <h1 class="hero-text-title">Hive Fitness <i class="fas fa-dumbbell"></i></h1>
+                            <h3 class="hero-text-message">The Online Fitness Community</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 hero-block">
+                        <img class="hero-image" src="/media/workout3.png" alt="working out">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
