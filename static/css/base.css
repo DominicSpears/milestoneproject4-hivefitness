@@ -380,7 +380,27 @@ input[name='q']::placeholder {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 164px;
+        padding-top: 95px;
+    }
+
+    #grad1 {
+        height: 200px;
+    }
+
+    .hero-text {
+        padding-top: 50px;
+    }
+
+    .hero-text-title {
+        font-size: 50px;
+    }
+    
+    .hero-text-message {
+        font-size: 25px;
+    }
+
+    .hero-image {
+        display: none;
     }
 
     body {
