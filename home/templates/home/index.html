@@ -64,77 +64,73 @@
       <hr style="width:60%; margin: auto;" class="my-1">
       <h3 class="text-center">Features</h3>
       <hr style="width:60%; margin: auto;" class="my-1">
-      <div class="container">
+    <div class="container">
         <div class="row">
           <!--Shop link-->
-          <div class="col s12 l4">
-              <div class="home-card card center-align">
-                  <div class="home-card-title">
-                      <h6>Fitness Store</h6>
-                  </div>
-                  <div class="home-card-image">
-                      <img src="/media/shop-home.jpg" class="inner-home-image" alt="treadmill">
-                  </div>
-                  <div class="home-card-content">We've worked hard to find the latest and greatest fitness equipment on the market. 
-                    This is a one stop shop for anything you made need to reach you exercise goals, from cardiovascular training, 
-                    resistance workouts or even recovery.</div>
-                  <div class="home-btn-container">
-                      <a href="{% url 'products' %}" class="home-btn">
-                          View the equipment
-                      </a>
-                  </div>
-              </div>
-          </div>
+            <div class="feature-card">
+                <div class="home-card card center-align">
+                    <div class="home-card-title">
+                        <h6>Fitness Store</h6>
+                    </div>
+                    <div class="home-card-image">
+                        <img src="/media/shop-home.jpg" class="inner-home-image" alt="treadmill">
+                    </div>
+                    <div class="home-card-content">We've worked hard to find the latest and greatest fitness equipment on the market. 
+                        This is a one stop shop for anything you made need to reach you exercise goals, from cardiovascular training, 
+                        resistance workouts or even recovery.
+                    </div>
+                    <div class="home-btn-container">
+                        <a href="{% url 'products' %}" class="home-btn">
+                            View the equipment
+                        </a>
+                    </div>
+                </div>
+            </div>
           <!--Forum link-->
-          <div class="col s12 l4">
-              <div class="home-card card center-align">
-                  <div class="home-card-title">
-                      <h6>Join our community</h6>
-                  </div>
-                  <div class="home-card-image">
-                      <img src="/media/forum-home.jpg" class="inner-home-image" alt="group exercise">
-                  </div>
-                  <div class="home-card-content">What sets us apart from other equipment suppliers is our community of customers. 
-                    Our forum allows you to get in touch with like minded individuals. Get inspired by reading up on success stories, reviews of our products and even discover some workout routines.
-                      Search though our vast collection located together in one convenient place.</div>
-                  <div class="home-btn-container">
-                      <a href="" class="home-btn">
-                          Visit our Forum
-                      </a>
-                  </div>
-              </div>
-          </div>
+            <div class="feature-card">
+                <div class="home-card card center-align">
+                    <div class="home-card-title">
+                        <h6>Join our community</h6>
+                    </div>
+                    <div class="home-card-image">
+                        <img src="/media/forum-home.jpg" class="inner-home-image" alt="group exercise">
+                    </div>
+                    <div class="home-card-content">What sets us apart from other equipment suppliers is our community of customers. 
+                        Our forum allows you to get in touch with like minded individuals. Get inspired by reading up on success stories, reviews of our products and even discover some workout routines. 
+                        Search though our vast collection located together in one convenient place.
+                    </div>
+                    <div class="home-btn-container">
+                        <a href="" class="home-btn">Visit our Forum</a>
+                    </div>
+                </div>
+            </div>
           <!--Profile/login link-->
-          <div class="col s12 l4">
-              <div class="home-card card center-align">
-                  <div class="home-card-title">
-                      <h6>Your own profile page</h6>
-                  </div>
-                  <div class="home-card-image">
-                      <img src="/media/user-home.webp" class="inner-home-image" alt="laptop profile">
-                  </div class="home-card-title">
-                  {% if request.user.is_authenticated %}
-                  <div class="home-card-content">Click the link bellow to access your own unique profile page. From here you
-                      can easily edit your details and review your orders. </div>
-                  {% else %}
-                  <div class="home-card-content">Oh no, you're not logged in! But don't worry, you can login here to access
-                      your unique profile page and some exclusive features.</div>
-                  {% endif %}
-                  <div class="home-btn-container">
-                      {% if request.user.is_authenticated %}
-                      <a href="{% url 'profile' %}" class="home-btn">
-                          Visit your profile page
-                      </a>
-                      {% else %}
-                      <a href="{% url 'account_login' %}" class="home-btn">
-                          Login
-                      </a>
-                      {% endif %}
-                  </div>
-              </div>
-          </div>
-      </div>
-      </div>
+            <div class="feature-card">
+                <div class="home-card card center-align">
+                    <div class="home-card-title">
+                        <h6>Your own profile page</h6>
+                    </div>
+                    <div class="home-card-image">
+                        <img src="/media/user-home.webp" class="inner-home-image" alt="laptop profile">
+                    </div>
+                    {% if request.user.is_authenticated %}
+                        <div class="home-card-content">Click the link bellow to access your own unique profile page. From here you 
+                            can easily edit your details and review your orders. </div>
+                    {% else %}
+                        <div class="home-card-content">Oh no, you're not logged in! But don't worry, you can login here to access 
+                            your unique profile page and some exclusive features.</div>
+                    {% endif %}
+                    <div class="home-btn-container">
+                        {% if request.user.is_authenticated %}
+                            <a href="{% url 'profile' %}" class="home-btn">Visit your profile page</a>
+                        {% else %}
+                            <a href="{% url 'account_login' %}" class="home-btn">Login</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </section>
 
     <section class="contact"  id="contact">

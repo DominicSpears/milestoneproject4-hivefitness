@@ -137,10 +137,14 @@ body {
     margin: 20px auto;
 }
 
+.feature-card {
+    width: 33.33%;
+    padding: 20px;
+}
+
 .home-card {
     background-color: rgb(51, 51, 51);
     color: white;
-    min-height: 450px;
 }
 
 .home-card-title {
@@ -403,6 +407,12 @@ input[name='q']::placeholder {
 
     .hero-image {
         display: none;
+    }
+
+    .feature-card {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
     }
 
     body {
