@@ -1,3 +1,4 @@
+/* -- General -- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,14 +15,44 @@ body {
     font-family: 'Bebas Neue';
 }
 
+/* -- Header -- */
 .header-main {
     background-color: rgb(51, 51, 51);
     color: white;
 }
 
+.nav-link {
+    color: white;
+    /*border: 2px solid blue;*/
+}
+
+.nav-link:hover {
+    color: rgb(255, 217, 0);
+}
+
+.navigation {
+    /*border: 2px solid blue;*/
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-item {
+    /*border: 2px solid rgb(87, 87, 114);*/
+    font-size: medium;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-item-xs {
+    font-size: smaller;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
 .mobile-nav-link {
     font-size: xx-small;
-    border: 2px solid red;
     margin: 0;
 }
 
@@ -31,6 +62,16 @@ body {
     max-height: 500px
 }
 
+.search-bar {
+    padding-right: 20px;
+}
+
+/* -- Delivery Banner -- */
+#delivery-banner {
+    background-color: black;
+}
+
+/* -- Hero message and image -- */
 #grad1 {
     background-color: rgb(255, 217, 0); /* For browsers that do not support gradients */
     background-image: linear-gradient(to left, rgb(182, 155, 3) , rgb(255, 217, 0));
@@ -53,23 +94,7 @@ body {
     height: auto;
 }
 
-/* Container holding the image and the text */
-.hero-container {
-    position: relative;
-  }
-  
-  /* Bottom right text */
-  .hero-text-block {
-    background-color: rgb(255, 238, 140);
-    position: absolute;
-    top: 0px;
-    right: 20px;
-    color: black;
-    padding: 40px;
-  }
-
-/*footer*/
-
+/* -- footer -- */
 .page-footer {
     margin-top: 50px;
     background-color: black;
@@ -106,44 +131,7 @@ body {
     color: rgb(255, 217, 0);
 }
 
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.logo-font {
-    text-transform: uppercase;
-}
-
-.navigation {
-    /*border: 2px solid blue;*/
-    padding: 0;
-    margin: 0;
-}
-
-.navigation-item {
-    /*border: 2px solid rgb(87, 87, 114);*/
-    font-size: x-small;
-    padding: 0;
-    margin: 0;
-}
-
-.main-logo-link {
-    width: fit-content;
-}
-
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
-
-/*features cards*/
-
+/* -- Feature cards -- */
 .features {
     width: 80%;
     margin: 20px auto;
@@ -193,45 +181,31 @@ body {
     color: black;
 }
 
-.btn-black {
-    background: black;
-    color: white;
+/* -- Product Form -- */
+.btn-file {
+    position: relative;
+    overflow: hidden;
 }
 
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
 }
 
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
-
-.bg-black {
-    background-color: black;
-}
-
-.btt-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
 }
 
 .btt-link,
@@ -240,12 +214,13 @@ body {
     cursor: pointer;
 }
 
+
+/* -- Forms -- */
 input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* ------------------------------- bootstrap toasts */
-
+/* -- bootstrap toasts -- */
 .message-container {
     position: fixed;
     top: 72px;
@@ -262,6 +237,7 @@ input[name='q']::placeholder {
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+/* -- Messages -- */
 .arrow-up {
     width: 0; 
     height: 0; 
@@ -273,7 +249,6 @@ input[name='q']::placeholder {
     right: 36px;
 }
 
-/* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -312,17 +287,16 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+/* -- from Bulma -- */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
-/* Allauth form formatting */
-
+/* -- Allauth form formatting -- */
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
@@ -375,34 +349,13 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
-/* Product Form */
+/* -------------------------------- Media Queries */
 
-.btn-file {
-    position: relative;
-    overflow: hidden;
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
 }
-
-.btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    border-radius: 0;
-}
-
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -415,7 +368,7 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 123px;
+        padding-top: 170px;
     }
 
     .extra-nav {
