@@ -2,6 +2,15 @@ from django.contrib import admin
 from .models import Post, Postcategory
 
 # Register your models here.
+
+
+class PostcategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'status','created_on')
     list_filter = ("status",)
@@ -10,4 +19,4 @@ class PostAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Post, PostAdmin)
-admin.site.register(Postcategory)
+admin.site.register(Postcategory, PostcategoryAdmin)

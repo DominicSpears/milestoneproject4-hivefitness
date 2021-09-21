@@ -3,6 +3,10 @@ from django.contrib.auth.models import User
 
 
 class Postcategory(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Postcategories'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
