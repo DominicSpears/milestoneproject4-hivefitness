@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post
+from .models import Post, Postcategory
 
 # Create your views here.
 
@@ -8,9 +8,17 @@ def all_posts(request):
     """ A view to show all blog posts """
 
     posts = Post.objects.all()
+    postcategories = None
+
+    if request.GET:
+        if 'postcategory' in request.GET:
+            postcategories = request.GET['postcategory'].split(',')
+            posts = posts.filter(postcategory__name__in=postcategories)
+            postcategories = Postcategory.objects.filter(name__in=postcategories)
 
     context = {
         'posts': posts,
+        'current_postcategories': postcategories,
     }
 
     return render(request, 'posts/posts.html', context)

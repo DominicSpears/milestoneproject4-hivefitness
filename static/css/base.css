@@ -425,4 +425,10 @@ input[name='q']::placeholder {
     display: block;
     height: 8.4rem; /* fixed header height*/
     margin: 8.4rem 0 0; /* negative fixed header height */
-  }
+}
+
+/* Blog Page */
+
+a.postcategory-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
