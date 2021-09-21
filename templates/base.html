@@ -45,7 +45,7 @@
 
     <title>Hive Fitness {% block extra_title %}{% endblock %}</title>
   </head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#top-nav" data-bs-offset="0">
     <header class="header-main container-fluid fixed-top">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-3 my-auto text-center text-lg-left">
@@ -175,8 +175,10 @@
     {% block page_header %}
     {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
     <footer class="page-footer">
         <div class="container footer-info">

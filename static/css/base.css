@@ -419,3 +419,10 @@ input[name='q']::placeholder {
         margin-top: 50px;
     }
 }
+
+:target::before {
+    content: "";
+    display: block;
+    height: 8.4rem; /* fixed header height*/
+    margin: 8.4rem 0 0; /* negative fixed header height */
+  }
