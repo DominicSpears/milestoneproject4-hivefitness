@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 
 from .models import Post, Postcategory
-from .forms import PostForm
+from .forms import PostForm, PostcategoryForm
 
 # Create your views here.
 
@@ -90,3 +90,32 @@ def delete_post(request, post_id):
     post.delete()
     messages.success(request, 'Post deleted!')
     return redirect(reverse('posts'))
+
+
+def all_postcategories(request):
+    """ A view to show all blog categorys """
+
+    template = 'posts/manage_categories.html'
+
+    return render(request, template)
+
+
+def add_postcategory(request):
+    """ Add a post category to the blog options """
+    if request.method == 'POST':
+        form = PostcategoryForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added post category!')
+            return redirect(reverse('posts'))
+        else:
+            messages.error(request, 'Failed to add post category. Please ensure the form is valid.')
+    else:
+        form = PostcategoryForm()
+
+    template = 'posts/add_postcategory.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

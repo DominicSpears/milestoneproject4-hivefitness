@@ -16,3 +16,10 @@ class PostForm(forms.ModelForm):
         self.fields['postcategory'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+
+
+class PostcategoryForm(forms.ModelForm):
+
+    class Meta:
+        model = Postcategory
+        fields = ('name', 'friendly_name')
