@@ -46,7 +46,7 @@ def add_post(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added post!')
-            return redirect(reverse('add_post'))
+            return redirect(reverse('posts'))
         else:
             messages.error(request, 'Failed to add post. Please ensure the form is valid.')
     else:
@@ -82,3 +82,11 @@ def edit_post(request, post_id):
     }
 
     return render(request, template, context)
+
+
+def delete_post(request, post_id):
+    """ Delete a post from the blog """
+    post = get_object_or_404(Post, pk=post_id)
+    post.delete()
+    messages.success(request, 'Post deleted!')
+    return redirect(reverse('posts'))
