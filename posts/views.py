@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post, Postcategory
+from .forms import PostForm
 
 # Create your views here.
 
@@ -34,3 +35,14 @@ def post_detail(request, post_id):
     }
 
     return render(request, 'posts/post_detail.html', context)
+
+
+def add_post(request):
+    """ Add a post to the blog page """
+    form = PostForm()
+    template = 'posts/add_post.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
