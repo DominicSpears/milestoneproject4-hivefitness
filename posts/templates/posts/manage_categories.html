@@ -10,11 +10,16 @@
 {% endblock %}
 
 {% block content %}
-<h2>Manage Categories</h2>
-<a href="{% url 'add_postcategory' %}" class="dropdown-item">Add Post Category</a>
 <div class="container">
+    <h2>Manage Categories</h2>
+    <h4>Add Category</h4>
+    <a href="{% url 'add_postcategory' %}" class="dropdown-item">Add Post Category</a>
+</div>
+
+<div class="container">
+    <h4>Current Categories</h2>
     {% for postcategory in postcategories %}
-    <div class="card mb-4">
+    <div class="card mb-1">
         <div class="card-body container">
             <div class="row">
                 <div class="col-12">

@@ -94,10 +94,14 @@ def delete_post(request, post_id):
 
 def all_postcategories(request):
     """ A view to show all blog categorys """
-
+    postcategories = Postcategory.objects.all()
     template = 'posts/manage_categories.html'
 
-    return render(request, template)
+    context = {
+        'postcategories': postcategories,
+    }
+
+    return render(request, template, context)
 
 
 def add_postcategory(request):
@@ -116,6 +120,21 @@ def add_postcategory(request):
     template = 'posts/add_postcategory.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_postcategory(request, postcategory_id):
+    """ Edit a post category in the blog options """
+    postcategory = get_object_or_404(Postcategory, pk=postcategory_id)
+    form = PostcategoryForm(instance=postcategory)
+    messages.info(request, f'You are editing {postcategory.name}')
+
+    template = 'posts/edit_postcategory.html'
+    context = {
+        'form': form,
+        'postcategory': postcategory,
     }
 
     return render(request, template, context)
