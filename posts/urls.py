@@ -9,5 +9,5 @@ urlpatterns = [
     path('delete/<int:post_id>/', views.delete_post, name='delete_post'),
     path('managecategories/', views.all_postcategories, name='postcategories'),
     path('addpostcategory/', views.add_postcategory, name='add_postcategory'),
-    path('editpostcategory/<int:post_id>/', views.edit_postcategory, name='edit_postcategory'),
+    path('editpostcategory/<int:postcategory_id>/', views.edit_postcategory, name='edit_postcategory'),
 ]

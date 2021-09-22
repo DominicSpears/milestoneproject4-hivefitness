@@ -128,8 +128,17 @@ def add_postcategory(request):
 def edit_postcategory(request, postcategory_id):
     """ Edit a post category in the blog options """
     postcategory = get_object_or_404(Postcategory, pk=postcategory_id)
-    form = PostcategoryForm(instance=postcategory)
-    messages.info(request, f'You are editing {postcategory.name}')
+    if request.method == 'POST':
+        form = PostcategoryForm(request.POST, instance=postcategory)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated post category!')
+            return redirect(reverse('postcategories'))
+        else:
+            messages.error(request, 'Failed to update post category. Please ensure the form is valid.')
+    else:
+        form = PostcategoryForm(instance=postcategory)
+        messages.info(request, f'You are editing {postcategory.name}')
 
     template = 'posts/edit_postcategory.html'
     context = {
