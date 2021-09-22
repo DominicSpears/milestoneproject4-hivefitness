@@ -147,3 +147,11 @@ def edit_postcategory(request, postcategory_id):
     }
 
     return render(request, template, context)
+
+
+def delete_postcategory(request, postcategory_id):
+    """ Delete a post category from the blog options """
+    postcategory = get_object_or_404(Postcategory, pk=postcategory_id)
+    postcategory.delete()
+    messages.success(request, 'Post category deleted!')
+    return redirect(reverse('postcategories'))
