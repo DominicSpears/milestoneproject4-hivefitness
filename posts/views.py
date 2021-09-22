@@ -111,7 +111,7 @@ def add_postcategory(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added post category!')
-            return redirect(reverse('posts'))
+            return redirect(reverse('postcategories'))
         else:
             messages.error(request, 'Failed to add post category. Please ensure the form is valid.')
     else:
