@@ -60,6 +60,11 @@ body {
     justify-content: center;
 }
 
+.btn-border-grey {
+    background-color: rgb(51, 51, 51);
+    padding: 20px;
+}
+
 /* -- Header -- */
 .header-main {
     background-color: rgb(51, 51, 51);
@@ -482,7 +487,11 @@ a.postcategory-badge > span.badge:hover {
 .blog-card {
     background-color: rgb(51, 51, 51);
     padding: 10px;
+    border-radius: 5px;
 }
 
-/* Post management */
+/* Products */
 
+.card-img-top {
+    min-height: 250px;
+}

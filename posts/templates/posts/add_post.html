@@ -12,21 +12,21 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <hr>
-                <h5 class="text-muted">Add a Post</h5>
-                <hr>
+            <div class="col-10 offset-1">
+                <hr class="break-md">
+                <h4 class="text-center title-font">Add a Post</h4>
+                <hr class="break-md">
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-10 offset-1">
                 <form method="POST" action="{% url 'add_post' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'posts' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add Post</button>
+                        <a class="btn site-btn no-shaddow" href="{% url 'posts' %}">Cancel</a>
+                        <button class="btn site-btn no-shaddow" type="submit">Add Post</button>
                     </div>
                 </form>
             </div>            
