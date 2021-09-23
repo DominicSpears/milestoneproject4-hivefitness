@@ -12,21 +12,21 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <hr>
-                <h5 class="text-muted">Edit a Product Category</h5>
-                <hr>
+            <div class="col-10 offset-1">
+                <hr class="break-md">
+                <h2 class="text-center title-font">Update a Product Category</h2>
+                <hr class="break-md">
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-10 offset-1">
                 <form method="POST" action="{% url 'edit_category' category.id %}" class="form mb-2">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'categories' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Update Product Category</button>
+                        <a class="site-btn btn" href="{% url 'categories' %}">Cancel</a>
+                        <button class="site-btn btn" type="submit">Update Product Category</button>
                     </div>
                 </form>
             </div>            
