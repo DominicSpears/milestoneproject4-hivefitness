@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category
-from .forms import ProductForm
+from .forms import ProductForm, CategoryForm
 
 # Create your views here.
 
@@ -151,27 +151,27 @@ def all_categories(request):
     return render(request, template, context)
 
 
-#def add_postcategory(request):
-#    """ Add a post category to the blog options """
-#    if request.method == 'POST':
-#        form = PostcategoryForm(request.POST)
-#        if form.is_valid():
-#            form.save()
-#            messages.success(request, 'Successfully added post category!')
-#            return redirect(reverse('postcategories'))
-#        else:
-#            messages.error(request, 'Failed to add post category. Please ensure the form is valid.')
-#    else:
-#        form = PostcategoryForm()
-#
-#    template = 'posts/add_postcategory.html'
-#    context = {
-#        'form': form,
-#    }
-#
-#    return render(request, template, context)
-#
-#
+def add_category(request):
+    """ Add a product category to the blog options """
+    if request.method == 'POST':
+        form = CategoryForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added product category!')
+            return redirect(reverse('categories'))
+        else:
+            messages.error(request, 'Failed to add product category. Please ensure the form is valid.')
+    else:
+        form = CategoryForm()
+
+    template = 'products/add_category.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
 #def edit_postcategory(request, postcategory_id):
 #    """ Edit a post category in the blog options """
 #    postcategory = get_object_or_404(Postcategory, pk=postcategory_id)
