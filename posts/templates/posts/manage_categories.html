@@ -11,31 +11,40 @@
 
 {% block content %}
 <div class="container">
-    <h2>Manage Categories</h2>
-    <h4>Add Category</h4>
-    <a href="{% url 'add_postcategory' %}" class="dropdown-item">Add Post Category</a>
+    <hr class="break-md">
+    <h3 class="text-center title-font">Manage Post Categories</h3>
+    <h4 class="text-center title-font">Add Category</h4>
+    <hr class="break-md">
+    <div class="btn-border">
+        <a href="{% url 'add_postcategory' %}" class="site-btn btn no-shaddow">Add Post Category</a>
+    </div>
+    
 </div>
 
 <div class="container">
-    <h4>Current Categories</h2>
-    {% for postcategory in postcategories %}
-    <div class="card mb-1">
-        <div class="card-body container">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <h4 class="">{{ postcategory.name }} | {{ postcategory.friendly_name }}</h4>
-                </div>
-                <div class="col-12 col-md-6">
-                    {% if request.user.is_superuser %}
-                        <small class="ml-3">
-                            <a href="{% url 'edit_postcategory' postcategory.id %}">Edit</a> | 
-                            <a class="text-danger" href="{% url 'delete_postcategory' postcategory.id %}">Delete</a>
-                        </small>
-                    {% endif %}
+    <hr class="break-md">
+    <h4 class="text-center title-font">Current Categories</h4>
+    <hr class="break-md">
+    <div class="blog-card">
+        {% for postcategory in postcategories %}
+        <div class="card mb-1">
+            <div class="card-body container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h6 class="">{{ postcategory.name }} | {{ postcategory.friendly_name }}</h6>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a class="site-btn" href="{% url 'edit_postcategory' postcategory.id %}">Edit</a> 
+                                <a class="site-btn" href="{% url 'delete_postcategory' postcategory.id %}">Delete</a>
+                            </small>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% endblock %}

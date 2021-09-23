@@ -55,6 +55,11 @@ body {
     border: 2px solid black;
 }
 
+.btn-border {
+    display: flex;
+    justify-content: center;
+}
+
 /* -- Header -- */
 .header-main {
     background-color: rgb(51, 51, 51);
@@ -477,4 +482,7 @@ a.postcategory-badge > span.badge:hover {
 .blog-card {
     background-color: rgb(51, 51, 51);
     padding: 10px;
-} 
+}
+
+/* Post management */
+
