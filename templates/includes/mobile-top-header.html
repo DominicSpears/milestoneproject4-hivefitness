@@ -24,28 +24,7 @@
           </form>
       </div>
   </li>
-  <li class="list-inline-item mobile-nav-link dropdown">
-      <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <div class="text-white text-center">
-              <div><i class="fas fa-user fa-lg"></i></div>
-              <p class="my-0">Profile</p>
-          </div>
-      </a>
-      <div class="dropdown-menu border-0" aria-labelledby="user-options">
-          {% if request.user.is_authenticated %}
-              {% if request.user.is_superuser %}
-                  <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
-                  <a href="{% url 'postcategories' %}" class="dropdown-item">Manage Post Categories</a>
-                  <a href="{% url 'add_post' %}" class="dropdown-item">Add Post</a>
-              {% endif %}
-              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-          {% else %}
-              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-          {% endif %}
-      </div>
-  </li>
+  
   <li class="list-inline-item mobile-nav-link">
       <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
           <div class="text-center">
@@ -59,5 +38,31 @@
               </p>
           </div>
       </a>
+    </li>
+
+    <li class="list-inline-item mobile-nav-link dropdown">
+        <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="text-white text-center">
+                <div><i class="fas fa-user fa-lg"></i></div>
+                <p class="my-0">Profile</p>
+            </div>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                    <a href="{% url 'categories' %}" class="dropdown-item">Manage Product Categories</a>
+                    <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
+                    <hr>
+                    <a href="{% url 'postcategories' %}" class="dropdown-item">Manage Post Categories</a>
+                    <a href="{% url 'add_post' %}" class="dropdown-item">Add Post</a>
+                {% endif %}
+                <hr>
+                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            {% endif %}
+        </div>
     </li>
   </ul>
