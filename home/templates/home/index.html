@@ -18,7 +18,7 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-6 text-center hero-block">
                         <div class="hero-text">
-                            <h1 class="hero-text-title">Hive Fitness <i class="fas fa-dumbbell"></i></h1>
+                            <h1 class="hero-text-title title-font">Hive Fitness <i class="fas fa-dumbbell"></i></h1>
                             <h3 class="hero-text-message">The Online Fitness Community</h3>
                         </div>
                     </div>
@@ -30,13 +30,13 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about"  id="about">
       <div class="container">
         <div class="row">
             <div class="offset-1 col-10 text-center">
-                <!-- <hr style="width:80%; margin: auto;" class="my-1"> -->
-                <h3 id="about">About Us</h3>
-                <!-- <hr style="width:80%; margin: auto;" class="my-1"> -->
+                <hr class="break-lg">
+                <h3 class="title-font">About Us</h3>
+                <hr class="break-lg">
                 <p>
                     Welcome to Hive Fitness, an online fitness community with a passion for exercise and physical health.
                     <br />
@@ -62,87 +62,96 @@
 
     <!--Feature Cards-->
     <section class="features">
-      <hr style="width:60%; margin: auto;" class="my-1">
-      <h3 class="text-center">Features</h3>
-      <hr style="width:60%; margin: auto;" class="my-1">
-    <div class="container">
-        <div class="row">
-          <!--Shop link-->
-            <div class="feature-card">
-                <div class="home-card card center-align">
-                    <div class="home-card-title">
-                        <h6>Fitness Store</h6>
-                    </div>
-                    <div class="home-card-image">
-                        <img src="/media/shop-home.jpg" class="inner-home-image" alt="treadmill">
-                    </div>
-                    <div class="home-card-content">We've worked hard to find the latest and greatest fitness equipment on the market. 
-                        This is a one stop shop for anything you made need to reach you exercise goals, from cardiovascular training, 
-                        resistance workouts or even recovery.
-                    </div>
-                    <div class="home-btn-container">
-                        <a href="{% url 'products' %}" class="home-btn">
-                            View the equipment
-                        </a>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="offset-1 col-10 text-center">
+                    <hr class="break-lg">
+                    <h3 class="text-center title-font">Features</h3>
+                    <hr class="break-lg">
                 </div>
             </div>
-          <!--Forum link-->
-            <div class="feature-card">
-                <div class="home-card card center-align">
-                    <div class="home-card-title">
-                        <h6>Join our community</h6>
-                    </div>
-                    <div class="home-card-image">
-                        <img src="/media/forum-home.jpg" class="inner-home-image" alt="group exercise">
-                    </div>
-                    <div class="home-card-content">What sets us apart from other equipment suppliers is our community of customers. 
-                        Our forum allows you to get in touch with like minded individuals. Get inspired by reading up on success stories, reviews of our products and even discover some workout routines. 
-                        Search though our vast collection located together in one convenient place.
-                    </div>
-                    <div class="home-btn-container">
-                        <a href="" class="home-btn">Visit our Forum</a>
-                    </div>
-                </div>
-            </div>
-          <!--Profile/login link-->
-            <div class="feature-card">
-                <div class="home-card card center-align">
-                    <div class="home-card-title">
-                        <h6>Your own profile page</h6>
-                    </div>
-                    <div class="home-card-image">
-                        <img src="/media/user-home.webp" class="inner-home-image" alt="laptop profile">
-                    </div>
-                    {% if request.user.is_authenticated %}
-                        <div class="home-card-content">Click the link bellow to access your own unique profile page. From here you 
-                            can easily edit your details and review your orders. </div>
-                    {% else %}
-                        <div class="home-card-content">Oh no, you're not logged in! But don't worry, you can login here to access 
-                            your unique profile page and some exclusive features.</div>
-                    {% endif %}
-                    <div class="home-btn-container">
-                        {% if request.user.is_authenticated %}
-                            <a href="{% url 'profile' %}" class="home-btn">Visit your profile page</a>
-                        {% else %}
-                            <a href="{% url 'account_login' %}" class="home-btn">Login</a>
-                        {% endif %}
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                      <!--Shop link-->
+                        <div class="feature-card">
+                            <div class="home-card card center-align">
+                                <div class="home-card-title">
+                                    <h6>Fitness Store</h6>
+                                </div>
+                                <div class="home-card-image">
+                                    <img src="/media/shop-home.jpg" class="inner-home-image" alt="treadmill">
+                                </div>
+                                <div class="home-card-content">We've worked hard to find the latest and greatest fitness equipment on the market. 
+                                    This is a one stop shop for anything you made need to reach you exercise goals, from cardiovascular training, 
+                                    resistance workouts or even recovery.
+                                </div>
+                                <div class="home-btn-container">
+                                    <a href="{% url 'products' %}" class="home-btn">
+                                        View the equipment
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                      <!--Blog link-->
+                        <div class="feature-card">
+                            <div class="home-card card center-align">
+                                <div class="home-card-title">
+                                    <h6>Join our community</h6>
+                                </div>
+                                <div class="home-card-image">
+                                    <img src="/media/forum-home.jpg" class="inner-home-image" alt="group exercise">
+                                </div>
+                                <div class="home-card-content">What sets us apart from other equipment suppliers is our community of customers. 
+                                    Our forum allows you to get in touch with like minded individuals. Get inspired by reading up on success stories, reviews of our products and even discover some workout routines. 
+                                    Search though our vast collection located together in one convenient place.
+                                </div>
+                                <div class="home-btn-container">
+                                    <a href="{% url 'posts' %}" class="home-btn">Visit our Forum</a>
+                                </div>
+                            </div>
+                        </div>
+                      <!--Profile/login link-->
+                        <div class="feature-card">
+                            <div class="home-card card center-align">
+                                <div class="home-card-title">
+                                    <h6>Your own profile page</h6>
+                                </div>
+                                <div class="home-card-image">
+                                    <img src="/media/user-home.webp" class="inner-home-image" alt="laptop profile">
+                                </div>
+                                {% if request.user.is_authenticated %}
+                                    <div class="home-card-content">Click the link bellow to access your own unique profile page. From here you 
+                                    can easily edit your details and review your orders.
+                                    </div>
+                                {% else %}
+                                    <div class="home-card-content">Oh no, you're not logged in! But don't worry, you can login here to access 
+                                        your unique profile page and some exclusive features.
+                                    </div>
+                                {% endif %}
+                                <div class="home-btn-container">
+                                    {% if request.user.is_authenticated %}
+                                        <a href="{% url 'profile' %}" class="home-btn">Visit your profile page</a>
+                                    {% else %}
+                                        <a href="{% url 'account_login' %}" class="home-btn">Login</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <div class="row mb-5 mx-2 mx-sm-0">
-                <div class="col-md-2"></div>
-                <div class="col-md-8 ct-contact">
+                <div class="col-md-10 offset-1 ct-contact">
                     <div class="mt-3 mb-4 text-center">
-                        <hr style="width:80%; margin: auto;" class="my-1">
-                        <h3 id="contact" class="text-center">Contact Us</h3>
-                        <hr style="width:80%; margin: auto;" class="my-1">
+                        <hr class="break-lg">
+                        <h3 class="text-center title-font">Contact Us</h3>
+                        <hr class="break-lg">
                     </div>
                     <form method="POST" action="{% url 'contactform' %}">
                         {% csrf_token %}
@@ -154,7 +163,6 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-md-2"></div>
             </div>
         </div>
     </section>

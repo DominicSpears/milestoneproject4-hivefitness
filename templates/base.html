@@ -19,6 +19,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -46,11 +47,11 @@
     <title>Hive Fitness {% block extra_title %}{% endblock %}</title>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#top-nav" data-bs-offset="0">
-    <header class="header-main container-fluid fixed-top">
+    <header class="title-font header-main container-fluid fixed-top">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-3 my-auto text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h3 class="logo-font text-white my-0"><strong>Hive</strong> Fitness <i class="fas fa-dumbbell"></i></h3>
+                    <h3 class="text-white my-0"><strong>Hive</strong> Fitness <i class="fas fa-dumbbell"></i></h3>
                 </a>
             </div>
             <div class="navigation col-12 col-lg-6 my-auto">
@@ -188,19 +189,19 @@
         <div class="container footer-info">
             <div class="row">
                 <div class="col s12 m6 l4">
-                    <h5 class="text-white">Looking for more?</h5>
+                    <h5 class="text-white title-font">Looking for more?</h5>
                     <p>Check out our social media pages. Our community now reaches even further.
                          Just select the platform suited to you using the links below.</p>
                 </div>
                 <div class="col s12 m6 l4 text-center">
-                    <h5 class="text-white">Quick Links</h5>
+                    <h5 class="text-white title-font">Quick Links</h5>
                     <p><a class="footer-link" href="{% anchor 'home' 'about' %}">About</a></p>
-                    <p><a class="footer-link" href="#"></i> Forum</a></p>
+                    <p><a class="footer-link" href="{% url 'posts' %}"></i> Blog</a></p>
                     <p><a class="footer-link" href="{% url 'products' %}"> Shop</a></p>
                     <p><a class="footer-link" href="{% anchor 'home' 'contact' %}">Contact</a></p>
                 </div>
                 <div class="col s12 m6 l4">
-                    <h5 class="text-white">Contact Us</h5>
+                    <h5 class="text-white title-font">Contact Us</h5>
                     <p><i class="fas fa-map-marker-alt text-white"></i> 41 Barbican Terrace, Barnstaple, Devon, England, EX39 2HQ </p>
                     <p><i class="fas fa-phone text-white"></i> 01234 567890</p>
                     <p><i class="fas fa-envelope text-white"></i> testadmin@email.com</p>

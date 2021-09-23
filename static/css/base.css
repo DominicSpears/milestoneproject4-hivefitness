@@ -12,7 +12,29 @@ body {
     background-color: rgb(255, 217, 0);
     background-size: cover;
     color: #555;
-    font-family: 'Bebas Neue';
+    font-family: 'Nunito', sans-serif;
+}
+
+.title-font {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.break-lg{
+    width: 100%;
+    margin: 10px auto;
+    background-color: rgb(51, 51, 51);
+}
+
+.break-md{
+    width: 80%;
+    margin: 10px auto;
+    background-color: rgb(51, 51, 51);
+}
+
+.break-sm {
+    width: 60%;
+    margin: 10px auto;
+    background-color: rgb(51, 51, 51);
 }
 
 /* -- Header -- */
@@ -78,7 +100,7 @@ body {
 }
 
 .hero-text {
-    padding-top: 200px;
+    padding-top: 150px;
 }
 
 .hero-text-title {
