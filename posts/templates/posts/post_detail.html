@@ -13,29 +13,28 @@
 <div class="container">
     <div class="row mt-1 mb-2"></div>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-10 offset-1">
             <div class="card mb-4">
                 <div class="card-body container">
                     <div class="row">
                         <div class="col-8">
-                            <h2 class="post-title">{{ post.title }}</h2>
+                            <h2 class="title-font">{{ post.title }}</h2>
                             <p class="post-author text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                            {% if request.user.is_superuser %}
-                                <small class="">
-                                    <a href="{% url 'edit_post' post.id %}">Edit</a> | 
-                                    <a class="text-danger" href="{% url 'delete_post' post.id %}">Delete</a>
-                                </small>
-                            {% endif %}
-                            <p><a href="{% url 'posts' %}" class="btn btn-primary">Return</a></p>
-                            
+                            <div>
+                                {% if request.user.is_superuser %}
+                                    <a class="site-btn" href="{% url 'edit_post' post.id %}">Edit</a>
+                                    <a class="site-btn" href="{% url 'delete_post' post.id %}">Delete</a>
+                                {% endif %}
+                                <a href="{% url 'posts' %}" class="site-btn btn btn-primary">Return</a>
+                            </div>
                         </div>
                         <div class="col-4">
                             <img class="img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="post-text">{{post.content}}</p>
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="post-text">{{post.content}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
