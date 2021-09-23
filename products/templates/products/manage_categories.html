@@ -22,9 +22,16 @@
     <div class="card mb-1">
         <div class="card-body container">
             <div class="row">
-                <div class="col-12">
-                    <h2 class="">{{ category.name }}</h2>
-                    <p class="text-muted h6">{{ category.friendly_name }}</p>
+                <div class="col-12 col-md-6">
+                    <h4 class="">{{ category.name }} | {{ category.friendly_name }}</h4>
+                </div>
+                <div class="col-12 col-md-6">
+                    {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                            <a href="{% url 'edit_category' category.id %}">Edit</a> | 
+                            <a class="text-danger" href="{% url 'delete_category' category.id %}">Delete</a>
+                        </small>
+                    {% endif %}
                 </div>
             </div>
         </div>

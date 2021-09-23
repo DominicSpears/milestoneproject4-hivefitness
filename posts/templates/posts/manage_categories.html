@@ -22,9 +22,10 @@
     <div class="card mb-1">
         <div class="card-body container">
             <div class="row">
-                <div class="col-12">
-                    <h2 class="">{{ postcategory.name }}</h2>
-                    <p class="text-muted h6">{{ postcategory.friendly_name }}</p>
+                <div class="col-12 col-md-6">
+                    <h4 class="">{{ postcategory.name }} | {{ postcategory.friendly_name }}</h4>
+                </div>
+                <div class="col-12 col-md-6">
                     {% if request.user.is_superuser %}
                         <small class="ml-3">
                             <a href="{% url 'edit_postcategory' postcategory.id %}">Edit</a> | 

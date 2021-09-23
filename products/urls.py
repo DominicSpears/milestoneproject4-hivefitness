@@ -9,7 +9,6 @@ urlpatterns = [
     path('delete/<int:product_id>/', views.delete_product, name='delete_product'),
     path('managecategories/', views.all_categories, name='categories'),
     path('addcategory/', views.add_category, name='add_category'),
-    #path('editpostcategory/<int:postcategory_id>/', views.edit_postcategory, name='edit_postcategory'),
-    #path('deletepostcategory/<int:postcategory_id>/', views.delete_postcategory, name='delete_postcategory'),
-
+    path('editcategory/<int:category_id>/', views.edit_category, name='edit_category'),
+    path('deletecategory/<int:category_id>/', views.delete_category, name='delete_category'),
 ]

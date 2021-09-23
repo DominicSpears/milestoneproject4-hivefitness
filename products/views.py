@@ -172,34 +172,33 @@ def add_category(request):
     return render(request, template, context)
 
 
-#def edit_postcategory(request, postcategory_id):
-#    """ Edit a post category in the blog options """
-#    postcategory = get_object_or_404(Postcategory, pk=postcategory_id)
-#    if request.method == 'POST':
-#        form = PostcategoryForm(request.POST, instance=postcategory)
-#        if form.is_valid():
-#            form.save()
-#            messages.success(request, 'Successfully updated post category!')
-#            return redirect(reverse('postcategories'))
-#        else:
-#            messages.error(request, 'Failed to update post category. Please ensure the form is valid.')
-#    else:
-#        form = PostcategoryForm(instance=postcategory)
-#        messages.info(request, f'You are editing {postcategory.name}')
-#
-#    template = 'posts/edit_postcategory.html'
-#    context = {
-#        'form': form,
-#        'postcategory': postcategory,
-#    }
-#
-#    return render(request, template, context)
-#
-#
-#def delete_postcategory(request, postcategory_id):
-#    """ Delete a post category from the blog options """
-#    postcategory = get_object_or_404(Postcategory, pk=postcategory_id)
-#    postcategory.delete()
-#    messages.success(request, 'Post category deleted!')
-#    return redirect(reverse('postcategories'))
-#
+def edit_category(request, category_id):
+    """ Edit a product category in the blog options """
+    category = get_object_or_404(Category, pk=category_id)
+    if request.method == 'POST':
+        form = CategoryForm(request.POST, instance=category)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated product category!')
+            return redirect(reverse('categories'))
+        else:
+            messages.error(request, 'Failed to update product category. Please ensure the form is valid.')
+    else:
+        form = CategoryForm(instance=category)
+        messages.info(request, f'You are editing {category.name}')
+
+    template = 'products/edit_category.html'
+    context = {
+        'form': form,
+        'category': category,
+    }
+
+    return render(request, template, context)
+
+
+def delete_category(request, category_id):
+    """ Delete a product category from the blog options """
+    category = get_object_or_404(Category, pk=category_id)
+    category.delete()
+    messages.success(request, 'Product category deleted!')
+    return redirect(reverse('categories'))
