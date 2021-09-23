@@ -12,33 +12,33 @@
 {% block content %}
 <div class="row">
     <div class="col text-center mt-3">
-        <hr style="width:60%; margin: auto;" class="my-1">
-        <h3 class="text-center">Blog Posts</h3>
-        <hr style="width:60%; margin: auto;" class="my-1">
+        <hr class="break-sm">
+        <h3 class="text-center title-font">Blog Posts</h3>
+        <hr class="break-sm">
     </div>
 </div>
 <div class="container">
     <div class="row mt-1 mb-2">
     </div>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-12 col-md-10 offset-md-1 blog-card">
             {% for post in posts %}
             <div class="card mb-4">
                 <div class="card-body container">
                     <div class="row">
-                        <div class="col-8">
-                            <h2 class="post-title">{{ post.title }}</h2>
+                        <div class="col-12 col-md-8">
+                            <h2 class="title-font">{{ post.title }}</h2>
                             <p class="post-author text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
                             <p class="post-text">{{post.content|slice:":100" }}</p>
-                            {% if request.user.is_superuser %}
-                                <small class="">
-                                    <a href="{% url 'edit_post' post.id %}">Edit</a> | 
-                                    <a class="text-danger" href="{% url 'delete_post' post.id %}">Delete</a>
-                                </small>
-                            {% endif %}
-                            <p><a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Read More &rarr;</a></p>
+                            <div>
+                                {% if request.user.is_superuser %}
+                                        <a class="site-btn" href="{% url 'edit_post' post.id %}">Edit</a>  
+                                        <a class="site-btn" href="{% url 'delete_post' post.id %}">Delete</a>
+                                    {% endif %}
+                                <a class="site-btn btn btn-primary" href="{% url 'post_detail' post.id %}">Read More</a>
+                            </div>   
                         </div>
-                        <div class="col-4">
+                        <div class="d-none d-md-block col-md-4">
                             <img class="img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
                         </div>
                     </div>

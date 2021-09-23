@@ -37,6 +37,23 @@ body {
     background-color: rgb(51, 51, 51);
 }
 
+.site-btn {
+    background-color: black;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(255, 217, 0);
+    font-size: 15px;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.site-btn:hover {
+    background-color: rgb(255, 217, 0);
+    color: black;
+    border: 2px solid black;
+}
+
 /* -- Header -- */
 .header-main {
     background-color: rgb(51, 51, 51);
@@ -454,3 +471,9 @@ input[name='q']::placeholder {
 a.postcategory-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
+}
+
+.blog-card {
+    background-color: rgb(51, 51, 51);
+    padding: 10px;
+} 
