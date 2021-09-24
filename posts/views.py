@@ -11,7 +11,7 @@ def all_posts(request):
     """ A view to show all blog posts """
 
     posts = Post.objects.all()
-    postcategories = None
+    postcategories = Postcategory.objects.all()
 
     if request.GET:
         if 'postcategory' in request.GET:

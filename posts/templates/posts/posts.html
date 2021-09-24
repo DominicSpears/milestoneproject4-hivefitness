@@ -23,12 +23,15 @@
     <div class="row">
         <div class="col-12 col-md-4 blog-category-card">
             <div class="category-card-inner">
-                <h3 class="title-font text-center">Categories</h3>
-                <p>Narrow down the blogs by category</p>
+                <h3 class="title-font text-center pt-2">Categories</h3>
+                <p class="text-center">Narrow down the blogs by category</p>
+                <hr class="break-md">
                 <!--category for loops-->
                 {% for postcategory in postcategories %}
-                    <a href="#">{{ postcategory.name }}</a>
+                    <a class="text-center site-btn d-flex justify-content-center" href="{% url 'posts' %}?postcategory={{ postcategory.name }}">{{ postcategory.name }}</a>
                 {% endfor %}
+                <a class="text-center site-btn d-flex justify-content-center" href="{% url 'posts' %}">All Posts</a>
+                <hr class="break-md">
             </div>
         </div>
         <div class="col-12 col-md-8 blog-card">
