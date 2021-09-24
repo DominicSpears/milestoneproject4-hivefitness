@@ -42,14 +42,10 @@
                                 <small>{{ comments.count }} comments</samll>
                                 <h4 class="title-font">Comments</h4>
                                 {% for comment in comments %}
-                                    <div class="comments">
-                                        <p>
-                                            {{ comment.name }}
-                                            <span class=" text-muted">
-                                                {{ comment.created_on }}
-                                            </span>
-                                        </p>
-                                        {{ comment.body | linebreaks }}
+                                    <div class="comments blog-card">
+                                        <p>{{ comment.name }} | <span class=" text-muted">{{ comment.created_on }}</span></p> 
+                                        <p>{{ comment.body | linebreaks }}</p>
+                                        
                                     </div>
                                 {% endfor %}
                             </div>

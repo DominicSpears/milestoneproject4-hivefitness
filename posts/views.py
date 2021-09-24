@@ -21,7 +21,7 @@ def all_posts(request):
 
     context = {
         'posts': posts,
-        'current_postcategories': postcategories,
+        'postcategories': postcategories,
     }
 
     return render(request, 'posts/posts.html', context)
@@ -108,10 +108,7 @@ def delete_post(request, post_id):
 def all_postcategories(request):
     """ A view to show all blog categorys """
     postcategories = Postcategory.objects.all()
-    template = {
-        'posts/manage_categories.html',
-        'posts/posts.html',
-    }
+    template = 'posts/manage_categories.html'
 
     context = {
         'postcategories': postcategories,

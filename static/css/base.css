@@ -502,6 +502,10 @@ a.postcategory-badge > span.badge:hover {
     height: 100%;
 }
 
+.comments {
+    color: rgb(255, 217, 0);
+}
+
 /* Products */
 
 .card-img-top {
