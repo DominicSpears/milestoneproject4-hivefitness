@@ -490,6 +490,18 @@ a.postcategory-badge > span.badge:hover {
     border-radius: 5px;
 }
 
+.blog-category-card {
+    background-color: rgb(51, 51, 51);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.category-card-inner {
+    background-color: white;
+    border-radius: 5px;
+    height: 100%;
+}
+
 /* Products */
 
 .card-img-top {

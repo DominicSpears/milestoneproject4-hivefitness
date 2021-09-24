@@ -21,7 +21,17 @@
     <div class="row mt-1 mb-2">
     </div>
     <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 blog-card">
+        <div class="col-12 col-md-4 blog-category-card">
+            <div class="category-card-inner">
+                <h3 class="title-font text-center">Categories</h3>
+                <p>Narrow down the blogs by category</p>
+                <!--category for loops-->
+                {% for postcategory in postcategories %}
+                    <a href="#">{{ postcategory.name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-12 col-md-8 blog-card">
             {% for post in posts %}
             <div class="card mb-4">
                 <div class="card-body container">

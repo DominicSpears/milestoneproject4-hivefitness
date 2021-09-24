@@ -39,8 +39,8 @@
                         <div class="col-md-10 offset-1">
                             <div class="card-body">
                                 <!-- comments -->
-                                <h2>{{ comments.count }} comments</h2>
-                      
+                                <small>{{ comments.count }} comments</samll>
+                                <h4 class="title-font">Comments</h4>
                                 {% for comment in comments %}
                                     <div class="comments">
                                         <p>
@@ -54,6 +54,7 @@
                                 {% endfor %}
                             </div>
                         </div>
+                        {% if request.user.is_authenticated %}
                         <div class="col-10 offset-1">
                             <div class="card-body">
                                 {% if new_comment %}
@@ -63,13 +64,18 @@
                                 {% else %}
                                     <h3>Leave a comment</h3>
                                     <form method="post">
-                                        {{ comment_form.as_p }}
                                         {% csrf_token %}
+                                        {{ comment_form | crispy }}
                                         <button type="submit" class="site-btn btn btn-lg">Submit</button>
                                     </form>
                                 {% endif %}
                             </div>
                         </div>
+                        {% else %}
+                            <div>
+                                <p>To leave a comment, please register or login.</p>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>

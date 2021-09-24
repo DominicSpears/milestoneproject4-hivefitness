@@ -142,7 +142,10 @@ def delete_product(request, product_id):
 def all_categories(request):
     """ A view to show all blog categorys """
     categories = Category.objects.all()
-    template = 'products/manage_categories.html'
+    template = {
+        'products/manage_categories.html',
+        'templates/base.html'
+    }
 
     context = {
         'categories': categories,
