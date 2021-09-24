@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post, Postcategory
+from .models import Post, Postcategory, Comment
 
 
 class PostForm(forms.ModelForm):
@@ -23,3 +23,9 @@ class PostcategoryForm(forms.ModelForm):
     class Meta:
         model = Postcategory
         fields = ('name', 'friendly_name')
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('name', 'email', 'body')

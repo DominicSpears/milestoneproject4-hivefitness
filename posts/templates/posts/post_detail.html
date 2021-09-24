@@ -36,6 +36,40 @@
                                 <p class="post-text">{{post.content}}</p>
                             </div>
                         </div>
+                        <div class="col-md-10 offset-1">
+                            <div class="card-body">
+                                <!-- comments -->
+                                <h2>{{ comments.count }} comments</h2>
+                      
+                                {% for comment in comments %}
+                                    <div class="comments">
+                                        <p>
+                                            {{ comment.name }}
+                                            <span class=" text-muted">
+                                                {{ comment.created_on }}
+                                            </span>
+                                        </p>
+                                        {{ comment.body | linebreaks }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-10 offset-1">
+                            <div class="card-body">
+                                {% if new_comment %}
+                                    <div class="alert alert-success" role="alert">
+                                        Your comment has been added!
+                                    </div>
+                                {% else %}
+                                    <h3>Leave a comment</h3>
+                                    <form method="post">
+                                        {{ comment_form.as_p }}
+                                        {% csrf_token %}
+                                        <button type="submit" class="site-btn btn btn-lg">Submit</button>
+                                    </form>
+                                {% endif %}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
