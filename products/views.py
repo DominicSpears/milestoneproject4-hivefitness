@@ -143,8 +143,7 @@ def all_categories(request):
     """ A view to show all blog categorys """
     categories = Category.objects.all()
     template = {
-        'products/manage_categories.html',
-        'templates/base.html'
+        'products/manage_categories.html'
     }
 
     context = {

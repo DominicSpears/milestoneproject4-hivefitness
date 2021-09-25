@@ -36,19 +36,19 @@
                                 <p class="post-text">{{post.content}}</p>
                             </div>
                         </div>
-                        <div class="col-md-10 offset-1">
+                        <div class="col-12">
                             <div class="card-body">
                                 <!-- comments -->
                                 <small>{{ comments.count }} comments</samll>
                                 <h4 class="title-font">Comments</h4>
                                 {% for comment in comments %}
-                                    <div class="comments blog-card my-1">
+                                    <div class="comments blog-card my-1 pb-3">
                                         <p>{{ comment.name }} | <span class=" text-muted">{{ comment.created_on }}</span></p> 
                                         <p>{{ comment.body | linebreaks }}</p>
                                         {% if request.user.is_superuser %}
                                             <small class="ml-3">
                                                 <a class="site-btn" href="{% url 'edit_comment' comment.id %}">Edit</a> 
-                                                <a class="site-btn" href="#">Delete</a>
+                                                <a class="site-btn" href="{% url 'delete_comment' comment.id %}">Delete</a>
                                             </small>
                                         {% endif %}
                                     </div>

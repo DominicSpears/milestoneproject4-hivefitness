@@ -194,3 +194,11 @@ def edit_comment(request, comment_id):
     }
 
     return render(request, template, context)
+
+
+def delete_comment(request, comment_id):
+    """ Delete a post comment from the blog """
+    comment = get_object_or_404(Comment, pk=comment_id)
+    comment.delete()
+    messages.success(request, 'Post comment deleted!')
+    return redirect(reverse('posts'))
