@@ -45,7 +45,12 @@
                                     <div class="comments blog-card my-1">
                                         <p>{{ comment.name }} | <span class=" text-muted">{{ comment.created_on }}</span></p> 
                                         <p>{{ comment.body | linebreaks }}</p>
-                                        
+                                        {% if request.user.is_superuser %}
+                                            <small class="ml-3">
+                                                <a class="site-btn" href="{% url 'edit_comment' comment.id %}">Edit</a> 
+                                                <a class="site-btn" href="#">Delete</a>
+                                            </small>
+                                        {% endif %}
                                     </div>
                                 {% endfor %}
                             </div>

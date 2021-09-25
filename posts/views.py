@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 
-from .models import Post, Postcategory
+from .models import Post, Postcategory, Comment
 from .forms import PostForm, PostcategoryForm, CommentForm
 
 # Create your views here.
@@ -168,3 +168,29 @@ def delete_postcategory(request, postcategory_id):
     postcategory.delete()
     messages.success(request, 'Post category deleted!')
     return redirect(reverse('postcategories'))
+
+
+def edit_comment(request, comment_id):
+    """ Edit a post comment in the blog options """
+    comment = get_object_or_404(Comment, pk=comment_id)
+    post = comment.post
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated post comment!')
+            return redirect(reverse('post_detail', args=[post.id]))
+        else:
+            messages.error(request, 'Failed to update post comment. Please ensure the form is valid.')
+    else:
+        form = CommentForm(instance=comment)
+        messages.info(request, 'You are editing a comment!')
+
+    template = 'posts/edit_comment.html'
+    context = {
+        'form': form,
+        'comment': comment,      
+        'post': post,      
+    }
+
+    return render(request, template, context)
