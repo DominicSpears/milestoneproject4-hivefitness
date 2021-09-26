@@ -479,11 +479,6 @@ input[name='q']::placeholder {
 
 /* Blog Page */
 
-a.postcategory-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
-}
-
 .blog-card {
     background-color: rgb(51, 51, 51);
     padding: 10px;

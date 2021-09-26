@@ -133,6 +133,8 @@ Site administrator
 |Casual Visitor    |Regiter with the site                        |Become a user                                           |
 |Casual Visitor    |See all blog articles                        |Access the information provided                         |
 |Casual Visitor    |Contact the site administrators              |Report a problem/ request information                   |
+
+|As a/an           |I want to be able to                         |So that I can                                           |
 |------------------|---------------------------------------------|--------------------------------------------------------|
 |Shopper           |Access the shop from any page of the site    |Get to the shop easily                                  |
 |Shopper           |See a display of all products                |Scan through the site's full collection                 |
@@ -141,6 +143,8 @@ Site administrator
 |Shopper           |Narrow down the products by category         |See all items in a specfic genre                        |
 |Shopper           |Order the products by price/category/etc     |Easily search through a long list of items              |
 |Shopper           |Review my order in a checkout                |Check that my order is correct before confirmation      |
+
+|As a/an           |I want to be able to                         |So that I can                                           |
 |------------------|---------------------------------------------|--------------------------------------------------------|
 |Registered User   |Save personal information                    |Enter it once only                                      |
 |Registered User   |See a profile page                           |Add or update my personal information                   |
@@ -148,6 +152,8 @@ Site administrator
 |Registered User   |Register my own login information            |Log into the site securely                              |
 |Registered User   |Get to associated social media sites         |Get further information/content                         |
 |Registered User   |Leave comments on any blog post              |Be part of the community discussion                     |
+
+|As a/an           |I want to be able to                         |So that I can                                           |
 |------------------|---------------------------------------------|--------------------------------------------------------|
 |Site administrator|Add, edit or delete products as required     |Maintain the online shop                                |
 |Site administrator|Manage the product categories                |Ensure the products can be easily searched/narrowed down|
@@ -170,10 +176,18 @@ Site administrator
 <a name="surface"></a>
 
 ### Surface Plane
+#### Navbar/footer/cards
+* Background color- Black, grey, rgb(51, 51, 51), rgb(85, 85, 85)
+* Font color - White, yellow, rgb(255, 217, 0), darker yellow, rgb(182, 155, 3)
+* Title font - Bebas Neue, sans-serif (Cannot be used for forms, contains capital letters only)
 
-* Background - Yellow
-* Navbar - Grey/black
-* Colours/font colours – Black / grey, yellow.  
+#### Body
+* Inverse of the navbar
+* Background color - White, yellow, rgb(255, 217, 0), darker yellow, rgb(182, 155, 3)
+* Font color - Black, grey, rgb(51, 51, 51), rgb(85, 85, 85)
+* Bulk font - Nunito, sans-serif
+
+![](media/readme/palette.png)
 ___
 
 <a name="tech"></a>
@@ -192,32 +206,37 @@ Technologies used to create the site:
 * JavaScript
   * The project uses **JavaScript** to provide an interactive experience and functionality.. 
 * Python
-  * The project uses **Python3** to link the main site and the database. 
-* Django
-  * The project uses **Django3** as a framework for python. 
+  * The project uses **Python3** to develop the functionality of the main site. 
 
 <a name="database"></a>
 
-#### Database
-* [Mongo DB](https://www.mongodb.com/)
-  * the project uses **mongo db** as a database provider to store various forms of information.
-  * ![Database Schema](#)
+#### Databases
+* [SQlite3](https://www.sqlite.org/index.html)
+ * the project uses **SQlite** as a database provider during the development phase of the project.
+ * [Amazon Simple Storage Service (S3)](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Categories=categories%23storage&trk=ps_a134p000006gB41AAE&trkCampaign=acq_paid_search_brand&sc_channel=PS&sc_campaign=acquisition_GB&sc_publisher=Google&sc_category=Storage&sc_country=GB&sc_geo=EMEA&sc_outcome=acq&sc_detail=amazon%20s3&sc_content=S3_e&sc_matchtype=e&sc_segment=489216385177&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Storage|S3|GB|EN|Text&s_kwcid=AL!4422!3!489216385177!e!!g!!amazon%20s3&ef_id=Cj0KCQjwtMCKBhDAARIsAG-2Eu9hR8l-hQ69-pJmHaHuY9lNbAXJapcvgZ4jaBggHW4bYFAFOQ5uQqIaAjZvEALw_wcB:G:s&s_kwcid=AL!4422!3!489216385177!e!!g!!amazon%20s3&awsf.Free%20Tier%20Types=*all)
+  * the project uses **Amazon S3** as a database provider to store various forms of information.
+  * Database Schema
+![Database Schema](media/readme/database-schema.png)
 
 <a name="libraries"></a>
 
 #### Libraries
-* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-  * the project uses **flask** as an application framework to aid the creation of complex applications.
-* [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
-  * the project uses **jinja v3.0.1** as a templating engine to allow writing code similar to python syntax.
-* [PyMongo](https://pypi.org/project/pymongo/)
-  * the project uses **pymongo v3.11.4** to connect python code to the mongo database.
-* [Materialize](https://flask.palletsprojects.com/en/2.0.x/)
+* [Django](https://www.djangoproject.com/)
+  * The project uses **Django3** as a framework for python to aid the creation of complex applications.
+* [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+  * The project uses **Django Crispy Forms** to provide consistant and attractive form layouts.
+* [Django Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+  * The project uses **Django Allauth** to provide the registry and login sunctionality for the site. 
+* [jQuery](https://jquery.com/)
+  * the project uses **jQuery** as a templating engine to allow writing code similar to python syntax.
+* [Bootstrap](https://flask.palletsprojects.com/en/2.0.x/)
   * the project uses **materialize** as a responsive front-end framework based on material design.
 * [Font Awesome](https://fontawesome.com/) 
   * The project uses **Font Awesome Version 5.15.1** to add icons that aid aesthetics or provide social media links.
 * [Google Fonts](https://fonts.google.com/)
   * the project uses **google fonts** as a source for its extra fonts.
+* [Stripe](https://stripe.com/ie)
+  * the project uses **Stripe** to handle secure payments in the online shop.
 
 <a name="tools"></a>
 
