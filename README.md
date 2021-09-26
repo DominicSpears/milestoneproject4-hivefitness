@@ -268,141 +268,163 @@ ___
 <a name="current"></a>
 
 #### Current logins
-I have created an administrator and a selection and users for you to test the features
-available to the differernt roles. 
+I have created a test administrator and a test user in order for the features of each role to be tested.
 
-|Username       |Password       |Role           |
-|---------------|---------------|---------------|
-|admin          |manage12345    |Administrator  |
-|domSpears      |user12345      |User           |
-|annexample     |example12345   |User           |
-|johnsmith      |example12345   |User           |
+|Username    |Password  |Email               |Role                |
+|------------|----------|--------------------|--------------------|
+|hiveadmin3  |q1w2e3r4  |testadmin@email.com |Super User (Admin)  |
+|testuser1   |t1e2s3t4  |testuser@email.com  |User                |
+
 
 <a name="active"></a>
+
+#### Active Features
 
 #### Register Page
 * Username and password input
 * Register button, adds new user details to the database
-* Link to login page
+* Link to Home page
 
 #### Login Page
 * Username and password input
 * Login button, logs existing user into the site, to their profile page
-* Link to register page
+* Link to Home page
 
 #### Navbar
 * Brand logo links to homepage
-* Navbar buttons link to individual pages
-* Certain nav links only appear when a user or an admin is logged in
-* Log out button ends session
+* About / Contact Us buttons link to specific portions of the home page
+* Blog / Shop buttons link to their own pages
+* Searchbar searches product list for matching items
+* Profile (logged out) links to login or register
+* Profile (logged in, user) links to my profile or log out pages
+* Profile (logged in, super user) links to my profile or log out pages as well as
+management links for the blog and shop 
+* Bag icon links to shopping bag page
 
 #### Footer
-* Links to social media sites, bring up a new tab
+* Quick links take you to their associated sections / pages
+* Links to social media sites, bring up selected site in a new tab
 
 #### Home Page
-* Link to cookware and recipe page
-* If a user/admin is logged in, link to profile page
-* If no user/admin is logged in, link to login page
+* About us information 
+* Feature Links to Shop and Blog pages
+* If a user/admin is logged in, feature link to profile page
+* If no user/admin is logged in, feature link to login page
+* Contact us form to send email to administrators
 
-#### Cookware Page
-* Add cookware button links to add cookware page (admin only)
-* For loop reveals all cookware items in the database
-* Website button linked to online store for idividual item
-* Edit button links to edit cookware page (admin only)
-* Delete button removes item from database (admin only)
-* Delete modal to confirm removal of an item
+#### Blog Page
+* Categories list that narrows down blog selection
+* All posts link to return to the full list
+* List of blog articles with basic information
+* Read more link to deicated article page
+* If superuser logged in, edit and delete buttons available
 
-#### Add Cookware Page
-* Inputs for item name, price, image and website link
-* Confirmation button add item to the database
-* Cancel button returns user to cookware page
-* Add modal to confirm addition of an item
+#### View Blog Page
+* Full article information, including author, created date and text.
+* Return button links to all posts page
+* Comments counter
+* List of existing comments if any
+* If user logged in, access to comment form to add a comment to the article
+* If super user logged in, edit and delete buttons available for the blog and the comments
 
-#### Edit Cookware Page
+#### Edit Comment Page (Super user only)
 * Input fields show existing data
-* Confirmation button linked to confirmation modal
-* Cancel button returns user to cookware page
-* Edit modal to confirm update of an item
+* Confirmation button adds new data to database
+* Cancel button returns user to all posts page
 
-#### Recipe Page
-* For loop reveals all recipes in the database
-* Search reveals recipes based on the recipe name or cuisines
-* Reset button returns all recipes to the page
-* Full recipe button linked to view recipe page
+#### Add Blog Page (Super user only)
+* Inputs for item category, title, author, content, etc
+* Confirmation button add item to the database
+* Cancel button returns user to all posts page
 
-#### View Recipe Page
-* Displays all recipe information from the database
-* Dietary requirements (vegetarian, vegan, spicy) displayed with 
-color coded icons, grey for no, colored for yes
+#### Edit Blog Page (Super user only)
+* Input fields show existing data
+* Confirmation button adds new data to database
+* Cancel button returns user to all posts page
 
-#### Add Recipe Page (User only)
-* Input fields for all recipe information
-* Cuisine dropdown gets options from the database
-* Dietary requirement switches
-* Ingredients/method input will recieve a custom number of items
-* Plus button adds an input, minus removes an input
-* Confirmation button adds a recipe to the database
-* Cancel button returns user to recipe page
+#### Post Category Management (Super user only)
+* Button to add category to current list, links to add category page
+* List of current categories
+* Edit an delete options for each category
+
+#### Edit Blog Category Page (Super user only)
+* Input fields show existing data
+* Confirmation button adds new data to database
+* Cancel button returns user to manage post categories page
+
+#### Shop 
+* Dropdown menu to sort products by price, category, name or rating
+* Product counter
+* Product cards with basic information
+* Link to individual product page via product image
+* If super user logged in, edit and delete links available
+
+#### View Product Page
+* Displays all product information from the database
+* If super user logged in, edit and delete links available
+* Quantity counter to add 1 or more of the same item to the bag
+* Keep shopping link to return to all products page
+* Add to bag button, adds product to current shopping bag
+* Success message with list of items in bag and link to checkout
+
+#### Add Product Page (Super user only)
+* Input fields for all product information
+* Category dropdown menu
+* Has sizes dropdown menu
+* Add product button to add item to the database
+* Cancel link returns to all products page
+
+#### Edit Recipe Page (Super user only)
+* Input fields show existing data
+* Confirmation button to update information
+* Cancel button returns user to profile page
+
+#### Product Category Management (Super user only)
+* Button to add category to current list, links to add category page
+* List of current categories
+* Edit an delete options for each category
+
+#### Edit Product Category Page (Super user only)
+* Input fields show existing data
+* Confirmation button adds new data to database
+* Cancel button returns user to manage product categories page
 
 #### Profile Page
-* For loop shows all recipes matching the username(user)
-* For loop shows all recipes(admin)
-* Full recipe button linked to view recipe page
-* Edit button linked to edit recipe page
-* Delete button linked to confirmation modal
-* Delete modal removes recipe from database
+* Form with current saved information, if any
+* Update button to enter new information on request
+* Order history with list of all previous orders by the user
 
-#### Edit Recipe Page
-* Input fields show existing data
-* Confirmation button linked to confirmation modal 
-* Cancel button returns user to profile page
-* Edit modal updates recipe in the database
+#### Shopping bag
+* List of current items in bag
+* Quantity of those items with update and remove options
+* Subtotal of each individual item
+* Bag total of all items in bag
+* Delivery cost, removed automatically if over the threshold
+* Keep shopping button returns user to products page
+* Secure checkout buttons links to checkout page
 
-#### User Page (admin only)
-* For loop shows all user in the database
-* Edit button linked to edit user page
-* Delete buttom linked to confirmation modal
-* Delete modal removed user from database
-
-#### Edit user Page
-* Input fields show existing data
-* Switch allows users to be made administrators
-* Confirmation button linked to confirmation modal
-* Cancel button returns user to cookware page
-* Edit modal to confirm update of a user
-
-#### Cuisine Page (admin only)
-* Add cuisine button links to add cuisine page
-* For loop reveals all cuisines in the database
-* Edit button links to edit cuisine page
-* Delete button removes cuisine from database
-* Delete modal to confirm removal of an item
-
-#### Add Cuisine Page (admin only)
-* Input for cuisine name
-* Confirmation button linked to modal
-* Cancel button returns user to cuisine page
-* Modal adds new cuisine to database
-
-#### Edit Cuisine Page (admin only)
-* Input field shows existing data
-* Confirmation button linked to confirmation modal
-* Cancel button returns user to cuisine page
-* Modal to confirm update of a cuisine
+#### Checkout
+* Order form, auto completes if data is saved already
+* Option to save info to profile
+* Payment form, taken by Stripe
+* Order summary with list of items in bag, subtotals and grand total
+* Adjust bag link returns user to shopping bag
+* Confirmation button completes order, if successful
+* Upon successful payment, success message and thankyou page appears
+* Each have order summary
+* Thank you page has link to return to the shop
 
 <a name="future"></a>
 
 #### Future Features
 
-* I currently only have one administrator and any restricted areas are accessed via username matching.
-I would like to introduce multiple administrators via a dedicated is_admin field. I currently have added an 
-is_admin field to the user database but due to time constraints have not written the code to use it as the 
-key to access restricted pages. 
+* 
 
-* I would like to add a filter system to select recipes based on other features. For example dietary 
-requirements or cook times.
+* 
 
-* I would like to add a review system so that users can review other peoples recipes and rate them.
+* I would like to add a product review system so that users could leave specific 
+information about their experiance with a product. It would also increase the amount 
+of interactions between users.
 ___
 
 <a name="test"></a>
