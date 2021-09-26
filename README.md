@@ -91,6 +91,7 @@ Business Goals (Site Owner's Goals)
 
 Casual Visitor
 * Welcoming homepage
+* A way to register and become a user
 * Easy to use navigation bar
 * Information about the site
 * A way to contact the site administrators
@@ -106,8 +107,11 @@ Shopper
 * A simple shopping bag
 
 Registered user
-* 
+* A personal profile page
+* Secure login
+* Saved personal information
 * Links to additional social media
+* Leave comments on the blog
 
 Site administrator
 * Add, edit or delete products as required
@@ -122,10 +126,35 @@ Site administrator
 ### Structure Plane
 #### User stories
 
-Experienced with cooking:
-
-Site administrator
-1. 
+|As a/an           |I want to be able to                         |So that I can                                           |
+|------------------|---------------------------------------------|--------------------------------------------------------|
+|Casual Visitor    |Read information about the site              |Know what the site offers                               |
+|Casual Visitor    |Easily navigate the site                     |Access any specific tool or product                     |
+|Casual Visitor    |Regiter with the site                        |Become a user                                           |
+|Casual Visitor    |See all blog articles                        |Access the information provided                         |
+|Casual Visitor    |Contact the site administrators              |Report a problem/ request information                   |
+|------------------|---------------------------------------------|--------------------------------------------------------|
+|Shopper           |Access the shop from any page of the site    |Get to the shop easily                                  |
+|Shopper           |See a display of all products                |Scan through the site's full collection                 |
+|Shopper           |Click on a product                           |See extra information an a rating                       |
+|Shopper           |Search for products                          |Look for specific items                                 |
+|Shopper           |Narrow down the products by category         |See all items in a specfic genre                        |
+|Shopper           |Order the products by price/category/etc     |Easily search through a long list of items              |
+|Shopper           |Review my order in a checkout                |Check that my order is correct before confirmation      |
+|------------------|---------------------------------------------|--------------------------------------------------------|
+|Registered User   |Save personal information                    |Enter it once only                                      |
+|Registered User   |See a profile page                           |Add or update my personal information                   |
+|Registered User   |See a list of previous orders                |Confirm what I have already purchased and when          |
+|Registered User   |Register my own login information            |Log into the site securely                              |
+|Registered User   |Get to associated social media sites         |Get further information/content                         |
+|Registered User   |Leave comments on any blog post              |Be part of the community discussion                     |
+|------------------|---------------------------------------------|--------------------------------------------------------|
+|Site administrator|Add, edit or delete products as required     |Maintain the online shop                                |
+|Site administrator|Manage the product categories                |Ensure the products can be easily searched/narrowed down|
+|Site administrator|Add, edit or delete post articles as required|Maintain the blog posts                                 |
+|Site administrator|Manage the post categories                   |Ensure the posts can be easily searched/narrowed down   |
+|Site administrator|See the number of comments on each post      |Indicate which posts are getting the most traffic       |
+|Site administrator|Edit or delete a blog comment                |Update mistakes or remove inappropriate content         |
 
 <a name="skeleton"></a>
 
