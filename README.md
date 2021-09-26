@@ -440,42 +440,7 @@ ___
 <a name="deploy"></a>
 
 #### To deploy to heroku:
-1. Create an app in heroku
-2. In the config vars, add IP, Port, db uri and sectret key
-3. Create and fill a requirements.txt file using python -m pip freeze
-4. Change settings to debug = False in app.py
-5. Ensure env.py is included in gitignore file
-6. Remove import env from the app.py
-7. Code is pushed to github
-8. In heroku, set to the github deployment method for automatic updates 
-9. To deploy click enable automatic deploys.  
 
-<a name="run"></a>
-
-#### To run this project locally:
-You will need a github account and to use the chrome browser
-1. Install the Github browser extensions for chrome, restart after installation
-2. Login to gihub
-3. Navigate to the project repository
-4. Click on the "Gitpod" button, located in the top right of the page menu
-5. This creates a new workspace for local workspace
-6. In gitppd, create env.py file with the following contents:
-  * os.environ.setdefault("IP", "0.0.0.0")
-  * os.environ.setdefault("PORT", "5000")
-  * os.environ.setdefault("SECRET_KEY", <>)
-  * os.environ.setdefault("MONGO_URI", "mongodb+srv://domSpears:<>@myfirstcluster.7ycsu.mongodb.net/recipe_book?retryWrites=true&w=majority")
-  * os.environ.setdefault("MONGO_DBNAME", "recipe_book")
-
-<a name="clone"></a>
-
-#### To clone this project (work within a local IDE)
-1. Select the repository from githib
-2. On the project page, click on the "code" dropdown menu icon
-3. Copy the clone url by clicking the clipboard icon on the right side
-4. Open git bash
-5. Change wroking direcory to location where you want directory to be clones
-5. Type git clone then paste the copied url
-6. Press enter, the local clone is created
 ___
 
 <a name="credit"></a>
@@ -485,25 +450,21 @@ ___
 <a name="code"></a>
 
 #### Code
+* Enabled me to get the for loop of post categories working. [Python Course](https://www.python-course.eu/python3_for_loop.php#:~:text=The%20Python%20for%20loop%20starts%20with%20the%20keyword,syntax%20looks%20like%20this%3A%20for%20in%20%3A%20else%3A) 
+
+* Ability to click a link to a specific midpoint of a page (about/contact us sections) Mentor guidence. 
+
 * Force edit and delete buttons of recipes to the bottom of the div. [w3schools](https://www.w3schools.com/cssref/pr_pos_bottom.asp)
 
 * Writing an if statment used for page authentication. [w3schools](https://www.w3schools.com/python/python_conditions.asp)
 
-* How to make an input field accept a url (for recipe/cookware images). [w3schools](https://www.w3schools.com/tags/att_input_type_url.asp)
-
 * Understanding how to add a customer number of ingredients/method steps. Mentor guidance.
-
-* Create a new page to prevent the page position changing after a search. Mentor guidance.
 
 * Understand the css grid and how to make divs responsive. [materialize](https://materializecss.com/grid.html)
 
-* Learn how to capitalise the username on the profile page. [w3schools](https://www.w3schools.com/cssref/pr_text_text-transform.asp)
-
 * Allow website links to be created in a new tab. [css-tricks](https://css-tricks.com/snippets/html/open-link-in-a-new-window/)
 
-* Helped me understand jinja loops and statments [Codeburst](https://codeburst.io/jinja-2-explained-in-5-minutes-88548486834e) 
 
-* Build a for loop of recipe cards. [Home assistant](https://community.home-assistant.io/t/build-cards-with-for-loop/212311)
 
 <a name="media"></a>
 
@@ -528,10 +489,9 @@ General reference / tutorial assistance.
 * Inspired by [Materialize.com](https://materializecss.com/)
 General reference / tutorial assistance.
 
-* Inspired by [BBC Food](https://www.bbc.co.uk/food)
-General reference, inspiration.
+* Inspired by [Django Central](https://djangocentral.com/building-a-blog-application-with-django/) General reference / tutorial assistance concerning the blog app.
 
-* Inspired by [Code Institute Backend Mini Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DCP101+2017_T3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/054c3813e82e4195b5a4d8cd8a99ebaa/)
+* Inspired by [Code Institute Boutique Ado Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/d3188bf68530497aa5fba55d07a9d7d7/)
 General reference, inspiration.
 
 * Guido Cecilio (mentor) for offering guidance and support.
