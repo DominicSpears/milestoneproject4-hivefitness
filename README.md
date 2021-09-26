@@ -161,11 +161,11 @@ Site administrator
 ### Skeleton Plane
 #### Wireframes
 
-[Mobile Wireframes](#)
+[Mobile Wireframes](media/wireframes/mp4-mobile-md.png)
 
-[Tablet Wireframes](#)
+[Tablet Wireframes](media/wireframes/mp4-tablet-md.png)
 
-[Desktop Wireframes](#)
+[Desktop Wireframes](media/wireframes/mp4-desktop-md.png)
 
 <a name="surface"></a>
 
