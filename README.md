@@ -418,9 +418,8 @@ management links for the blog and shop
 
 #### Future Features
 
-* 
-
-* 
+* I would like to be able to update the product categories and have that change 
+reflected in the navbar. Perhaps a context variable could be used to accomplish this. 
 
 * I would like to add a product review system so that users could leave specific 
 information about their experiance with a product. It would also increase the amount 
