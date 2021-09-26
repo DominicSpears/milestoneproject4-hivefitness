@@ -1,11 +1,12 @@
-# Soul Food!
+# Hive Fitness - An online fitness community!
 
 Welcome to Hive Fitness, a website for users all over the world buy top quality 
-fitness equipment in order to reach their training goals. It also includes a forum 
-for our customers to discuss everything fitness related. Made for my Code Institute 
-Milestone Project 4.
+fitness equipment in order to reach their training goals. It also includes a blog
+wgich is regularly updated with arlicles about a variety of fitness topics.  This 
+allows our customers to comment and discuss these topics with a community of like 
+minded people. Made for my Code Institute Milestone Project 4.
 
-Follow the link to [Hive Fitness](https://flask-recipe-book.herokuapp.com/)
+Follow the link to [Hive Fitness](#deployed app url)
 
 ![Responsive Example](#)
 
@@ -51,8 +52,10 @@ ___
 
 This website is designed to be a full stack development project. By doing so users have 
 access to a fully functioning e-store and can order a wide variety of fitness equipment. 
-Each product has it's own page with information, cost and rating. Also users have access to 
-a public forum to discuss products, training tips and ideas. 
+Each product has it's own page with information, cost and rating. Also visitors have access 
+to a blog which covers a wide range of topics from latest product reviews to training tips 
+and ideas. By signing up as a user, visitors can leave comments on specific stricles and 
+posts, enabling them to become part of the discussion. 
 ___
 
 <a name="ux"></a>
@@ -72,25 +75,47 @@ Target Audience
 
 Visitor / User Goals
 * Purchase products in a smooth and secure way
-* Get informed with the products before buying by product reviews / product information
-* Gain interesting knowledge about flowers from blog articles and leave a comment on blog articles
+* Get informed with the products before buying by product ratings / product information
+* Gain knowledgefrom blog articles and leave comments on those blog articles
 
 Business Goals (Site Owner's Goals)
 * Provide customers with a secure and safe online store
 * Establish the shop's brand image
-* Expand the business with a community forum
-* Make profit from selling products / services
+* Expand the business with a community blog
+* Make profit from selling products
 
 <a name="scope"></a>
 
 ### Scope Plane
 #### Features specific for users
 
-Experienced with cooking
+Casual Visitor
+* Welcoming homepage
+* Easy to use navigation bar
+* Information about the site
+* A way to contact the site administrators
+* Access to the blog articles
+
+Shopper
+* Easy access to the shop from all pages of the site
+* Clear product layout with images
+* Easy to absorb product information
+* Product categories to narrow the search
+* A product search bar
+* A way to order selected products by price/categoy/etc
+* A simple shopping bag
+
+Registered user
 * 
+* Links to additional social media
 
 Site administrator
-* 
+* Add, edit or delete products as required
+* Allow management of product categories
+* Add, edit or delete post articles as required
+* Allow management of post categories
+* Number of comments on a specific article
+* Edit or delete any blog comment
 
 <a name="structure"></a>
 
