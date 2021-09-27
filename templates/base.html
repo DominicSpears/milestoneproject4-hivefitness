@@ -201,7 +201,7 @@
                 <div class="ccol-12 col-md-6 col-lg-4 text-sm-left text-md-center">
                     <h5 class="text-white title-font">Quick Links</h5>
                     <p><a class="footer-link" href="{% anchor 'home' 'about' %}">About</a></p>
-                    <p><a class="footer-link" href="{% url 'posts' %}"></i> Blog</a></p>
+                    <p><a class="footer-link" href="{% url 'posts' %}"> Blog</a></p>
                     <p><a class="footer-link" href="{% url 'products' %}"> Shop</a></p>
                     <p><a class="footer-link" href="{% anchor 'home' 'contact' %}">Contact</a></p>
                 </div>
@@ -225,7 +225,7 @@
                     <a class="social-btn right" href="https://www.pinterest.co.uk/" target="_blank"><i
                             class="fab fa-pinterest-square"></i></a>
                 </p>
-                <p>&copy 2021 Dominic Spears | For educational purposes only</p>
+                <p>&copy; 2021 Dominic Spears | For educational purposes only</p>
             </div>
         </div>
     </footer>
@@ -249,7 +249,7 @@
     {% endif %}
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     {% endblock %}
