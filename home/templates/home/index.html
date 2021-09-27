@@ -80,7 +80,7 @@
                                     <h6>Fitness Store</h6>
                                 </div>
                                 <div class="home-card-image">
-                                    <img src="/media/shop-home.jpg" class="inner-home-image" alt="treadmill">
+                                    <img src="{{ MEDIA_URL }}shop-home.jpg" class="inner-home-image" alt="treadmill">
                                 </div>
                                 <div class="home-card-content">We've worked hard to find the latest and greatest fitness equipment on the market. 
                                     This is a one stop shop for anything you made need to reach you exercise goals, from cardiovascular training, 
@@ -100,7 +100,7 @@
                                     <h6>Join our community</h6>
                                 </div>
                                 <div class="home-card-image">
-                                    <img src="/media/forum-home.jpg" class="inner-home-image" alt="group exercise">
+                                    <img src="{{ MEDIA_URL }}forum-home.jpg" class="inner-home-image" alt="group exercise">
                                 </div>
                                 <div class="home-card-content">What sets us apart from other equipment suppliers is our community of customers. 
                                     Our forum allows you to get in touch with like minded individuals. Get inspired by reading up on success stories, reviews of our products and even discover some workout routines. 
@@ -118,7 +118,7 @@
                                     <h6>Your own profile page</h6>
                                 </div>
                                 <div class="home-card-image">
-                                    <img src="/media/user-home.webp" class="inner-home-image" alt="laptop profile">
+                                    <img src="{{ MEDIA_URL }}user-home.webp" class="inner-home-image" alt="laptop profile">
                                 </div>
                                 {% if request.user.is_authenticated %}
                                     <div class="home-card-content">Click the link bellow to access your own unique profile page. From here you 
