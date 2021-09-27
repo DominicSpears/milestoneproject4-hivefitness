@@ -19,7 +19,7 @@
                     <div class="row">
                         <div class="col">
                             <hr class="menu-spacing">
-                            <h6 class="logo-font mb-4">Categories</h2>
+                            <h2 class="logo-font mb-4">Categories</h2>
                             <hr class="menu-spacing">
                                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                                 {% for category in categories %}
@@ -33,7 +33,7 @@
                         </div>
                         <div class="col">
                             <hr>
-                            <h6 class="logo-font mb-4">Sort Products</h2>
+                            <h2 class="logo-font mb-4">Sort Products</h2>
                             <hr>
                                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By
                                     Price</a>
