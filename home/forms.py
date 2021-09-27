@@ -9,7 +9,7 @@ class ContactForm(forms.Form):
         ('Additional Equipment Recommendations',
          'Additional Equipment Recommendations'),
         ('Order Enquiries and Updates', 'Order Enquiries and Updates'),
-        ('Messageboard Queries', 'Messageboard Queries'),
+        ('Blog Queries', 'Blog Queries'),
         ('Site Malfunction', 'Site Malfunction'),
         ('Other', 'Other'),
     )
