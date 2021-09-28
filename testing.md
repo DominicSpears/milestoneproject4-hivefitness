@@ -12,7 +12,8 @@
 ### Bugs Discovered
 #### Solved Bugs
 
-1. 
+1. When not logged in, the edit and delete buttons were not present (as they should be) but their div was visible.
+  * To address this I altered the location of the if statement to surround the whole div instead of just the contents.
 
 
 <a name="remaining"></a>
@@ -20,10 +21,10 @@
 #### Remaining Bugs
 
 1. Blog article text
-  * Blog article does not include new paragraphs. 
+  * Blog article does not include individual paragraphs. The text bunches up to the top of the container.
 
 2. Homepage links
-  * Homepage links (about / contact us) create a blank blobk above the section when clicked.
+  * Homepage links (about / contact us) create a blank block of space above the section when clicked. So if scrolling up, after clicking one of the above links, there will be a blank space present. When clicking the homepage link, the spaces disappear.
 
 
 <a name="validator"></a>
