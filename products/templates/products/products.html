@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid mt-4">
+<div class="container-fluid">
     <div class="row">
         <div class="col-10 offset-1">
             <hr class="break-md">
@@ -74,7 +74,7 @@
                     </div>
                     <div class="card-footer bg-white pt-0 border-0 text-left">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12">
                                 <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                                 {% if product.category %}
                                 <p class="small mt-1 mb-0">
@@ -90,14 +90,14 @@
                                 {% else %}
                                 <small class="text-muted">No Rating</small>
                                 {% endif %}
+                                {% if request.user.is_superuser %}
                                 <div class="btn-border-grey">
-                                    {% if request.user.is_superuser %}
-                                    <small class="ml-3">
+                                    <small>
                                         <a class="site-btn" href="{% url 'edit_product' product.id %}">Edit</a>
                                         <a class="site-btn" href="{% url 'delete_product' product.id %}">Delete</a>
                                     </small>
-                                    {% endif %}
                                 </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
