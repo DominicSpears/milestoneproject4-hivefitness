@@ -25,13 +25,14 @@
 
 ### Validator Tests
 #### All html Pages
-  * W3C HTML Validator - 
+  * W3C HTML Validator - Document checking completed. No errors or warnings to show.
 
 #### style.css
-  * W3C CSS Validator - 
+  * W3C CSS Validator - Congratulations! No Error Found.
 
 #### script.js
-  * JSHint Code Tester - 
+  * JSHint Code Tester - One warning
+'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
 #### app.py
   * PEP8 Python Validator - 
 
