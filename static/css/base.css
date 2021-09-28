@@ -474,8 +474,8 @@ input[name='q']::placeholder {
 :target::before {
     content: "";
     display: block;
-    height: 8.4rem; /* fixed header height*/
-    margin: 8.4rem 0 0; /* negative fixed header height */
+    height: 10rem; /* fixed header height*/
+    margin: 10rem 0 0; /* negative fixed header height */
 }
 
 /* Blog Page */
