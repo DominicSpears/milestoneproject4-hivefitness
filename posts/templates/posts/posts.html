@@ -22,13 +22,13 @@
     </div>
     <div class="row p-3">
         <div class="col-12 col-md-4 blog-category-card">
-            <div class="category-card-inner">
+            <div>
                 <h3 class="title-font text-center pt-2">Categories</h3>
                 <p class="text-center">Narrow down the blogs by category</p>
                 <hr class="break-md">
                 <!--category for loops-->
                 {% for postcategory in postcategories %}
-                    <a class="text-center site-btn d-flex justify-content-center" href="{% url 'posts' %}?postcategory={{ postcategory.name }}">{{ postcategory.name }}</a>
+                    <a class="text-center site-btn d-flex justify-content-center text-capitalize" href="{% url 'posts' %}?postcategory={{ postcategory.name }}">{{ postcategory.name }}</a>
                 {% endfor %}
                 <a class="text-center site-btn d-flex justify-content-center" href="{% url 'posts' %}">All Posts</a>
                 <hr class="break-md">
@@ -39,7 +39,10 @@
             <div class="card mb-4">
                 <div class="card-body container">
                     <div class="row">
-                        <div class="col-12 col-md-8">
+                        <div class="col-12">
+                            <img class="img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
+                        </div>
+                        <div class="col-12">
                             <h2 class="title-font">{{ post.title }}</h2>
                             <p class="post-author text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
                             <p class="post-text">{{post.content|slice:":100" }}</p>
@@ -50,9 +53,6 @@
                                     {% endif %}
                                 <a class="site-btn btn shadow-none" href="{% url 'post_detail' post.id %}">Read More</a>
                             </div>   
-                        </div>
-                        <div class="d-none d-md-block col-md-4">
-                            <img class="img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
                         </div>
                     </div>
                 </div>

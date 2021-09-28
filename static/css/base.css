@@ -481,13 +481,13 @@ input[name='q']::placeholder {
 /* Blog Page */
 
 .blog-card {
-    background-color: rgb(51, 51, 51);
+    background-color: rgb(255, 217, 0);
     padding: 10px;
     border-radius: 5px;
 }
 
 .blog-category-card {
-    background-color: rgb(51, 51, 51);
+    background-color: rgb(255, 217, 0);
     padding: 10px;
     border-radius: 5px;
 }
