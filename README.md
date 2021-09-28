@@ -441,7 +441,133 @@ ___
 
 #### To deploy to heroku:
 
-___
+1. Install these packages to the local environment
+  * gnicorn
+  * psycopg2-binary
+  * da-database-url
+
+2. Create requirements.txt file and freeze packages to it with pip3 freeze > requirements.txt
+
+3. Create procfile and type in web: gunicorn hive_fitness.wsgi:application
+
+4. Add, commit and push the changes to you repository
+
+5. Create new app in heroku. Seyt a name and select the closest region to you, click create.
+
+6. Go to resources tab, in the add ons searchbar look for heroku postgres. Select hobby dev-Free. Click submit.
+
+7. In the heroku settings tab, reveal config vars set the following keys an values
+
+8. Comment out the current database in settings.py, add in the new database 'default': dj_database_url.parse("<your Postrgres database URL here>")
+
+|Key                 |Value                     |
+|--------------------|--------------------------|
+|AWS_ACCESS_KEY_ID    |Your AWS Access key       |
+|AWS_SECRET_ACCESS_KEY|Your secret key           |
+|DATABASE_URL         |Your postgres Database URL|
+|EMAIL_HOST_PASS      |Your email password       |
+|EMAIL_HOST_USER      |Your email address        |   
+|SECRET_KEY           |Your secret key           |
+|STRIPE_PUBLIC_KEY    |Your stripe puplic key    |
+|STRIPE_SECRET_KEY    |Your stripe secret key    |
+|STRIPE_WH_SECRET     |Your stripe WH Key        |
+|USE_AWS              |True                      |
+
+9. Migrate database models to the Postgres database using python3 manage.py migrate
+
+10. Add any categories, products or posts to the new database via the hive fitness website.
+
+11. Create superuser using the command python3 manage.py createsuperuser, follow instructions to complete.
+
+12. Replace database settings with new code below:
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
+13. Disable collect static by using the command heroku config:set DISABLE_COLLECTSTATIC=1
+
+14. Add ALLOWED_HOSTS = ['hive-fitness.herokuapp.com', 'localhost'] to settings.py
+
+15. In stripe, add heroku app URL as new webhook endpoint.
+
+16. Update the settings.py with the new stripe environment and email settings.
+
+17. Commit all changes to heroku. The app will be working but no media or static files will be present.
+
+#### AWS Amazon Web Service:
+
+1.  Create a AWS S3 bucket for media and static files. See amazon S3 doccumentation for more information.  
+
+2. Use the cores configeration below. 
+
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+
+3. In your environment, install boto3 and django-storages with pip3 install boto3 and pip3 install django-storages. This connect the bucket to django.
+
+4. Add storages to installed apps in settings.py
+
+5. Addthe following variables to settings.py
+
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'hive-fitness'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+6. If present, delete DISABLE_COLLECTSTATIC from Heroku Config Var
+
+7. Add, commit an push changes to github/heroku
+
+#### Auto deploys to heroku
+
+1. Go to deploy tab on heroku dashboard.
+
+2. At automatic deploys, select choose a github repository. 
+
+3. Search and select for the Hive fitness repository
+
+4. Click enable automatic deploys
+ ___
 
 <a name="credit"></a>
 
