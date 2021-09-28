@@ -24,17 +24,18 @@
 <a name="validator"></a>
 
 ### Validator Tests
+
 #### All html Pages
   * W3C HTML Validator - Document checking completed. No errors or warnings to show.
 
-#### style.css
+#### base.css
   * W3C CSS Validator - Congratulations! No Error Found.
 
-#### script.js
-  * JSHint Code Tester - One warning
-'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-#### app.py
-  * PEP8 Python Validator - 
+#### stripe_elements.js
+  * JSHint Code Tester - One warning 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+
+#### All Python Pages
+  * PEP8 Python Validator - All right
 
 <a name="manual"></a>
 
