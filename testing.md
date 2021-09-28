@@ -175,6 +175,38 @@
   * Tooltip reveals which section needs filling out
   * Result: pass
 
+#### Blog Page
+
+1. Categories buttons
+  * Click each button
+  * Reveal relevant blog articles
+  * Result: pass
+
+1. All posts buttons
+  * Click all posts button
+  * User taken to all posts page 
+  * Result: pass
+
+1. Blog management buttons
+  * If logged in as super user, management buttons available
+  * Result: pass
+
+1. Blog edit button
+  * Click edit button
+  * Super user taken to edit post page
+  * Result: pass
+
+1. Blog delete button
+  * Click delete button
+  * Blog post deleted
+  * Result: pass
+
+1. Blog read more button
+  * Click read more button
+  * User taken to article page
+  * Result: pass
+
+
 
 
 
