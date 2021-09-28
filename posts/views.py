@@ -17,7 +17,8 @@ def all_posts(request):
         if 'postcategory' in request.GET:
             postcategories = request.GET['postcategory'].split(',')
             posts = posts.filter(postcategory__name__in=postcategories)
-            postcategories = Postcategory.objects.filter(name__in=postcategories)
+            postcategories = Postcategory.\
+                objects.filter(name__in=postcategories)
 
     context = {
         'posts': posts,
@@ -61,7 +62,8 @@ def add_post(request):
             messages.success(request, 'Successfully added post!')
             return redirect(reverse('posts'))
         else:
-            messages.error(request, 'Failed to add post. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add post. Please ensure the\
+                 form is valid.')
     else:
         form = PostForm()
 
@@ -83,7 +85,8 @@ def edit_post(request, post_id):
             messages.success(request, 'Successfully updated post!')
             return redirect(reverse('post_detail', args=[post.id]))
         else:
-            messages.error(request, 'Failed to update post. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update post. Please ensure the\
+                 form is valid.')
     else:
         form = PostForm(instance=post)
         messages.info(request, f'You are editing {post.title}')
@@ -126,7 +129,8 @@ def add_postcategory(request):
             messages.success(request, 'Successfully added post category!')
             return redirect(reverse('postcategories'))
         else:
-            messages.error(request, 'Failed to add post category. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add post category. Please\
+                 ensure the form is valid.')
     else:
         form = PostcategoryForm()
 
@@ -148,7 +152,8 @@ def edit_postcategory(request, postcategory_id):
             messages.success(request, 'Successfully updated post category!')
             return redirect(reverse('postcategories'))
         else:
-            messages.error(request, 'Failed to update post category. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update post category. Please\
+                 ensure the form is valid.')
     else:
         form = PostcategoryForm(instance=postcategory)
         messages.info(request, f'You are editing {postcategory.name}')
@@ -181,7 +186,8 @@ def edit_comment(request, comment_id):
             messages.success(request, 'Successfully updated post comment!')
             return redirect(reverse('post_detail', args=[post.id]))
         else:
-            messages.error(request, 'Failed to update post comment. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update post comment. Please\
+                 ensure the form is valid.')
     else:
         form = CommentForm(instance=comment)
         messages.info(request, 'You are editing a comment!')
@@ -189,8 +195,8 @@ def edit_comment(request, comment_id):
     template = 'posts/edit_comment.html'
     context = {
         'form': form,
-        'comment': comment,      
-        'post': post,      
+        'comment': comment,
+        'post': post,
     }
 
     return render(request, template, context)

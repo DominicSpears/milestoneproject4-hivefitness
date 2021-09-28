@@ -15,7 +15,7 @@ def index(request):
     Render index.html and ContactForm
     """
     template = 'home/index.html'
-    
+
     contact_form = ContactForm()
 
     context = {

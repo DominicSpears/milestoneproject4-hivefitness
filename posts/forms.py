@@ -11,7 +11,8 @@ class PostForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         postcategories = Postcategory.objects.all()
-        friendly_names = [(c.id, c.get_friendly_name()) for c in postcategories]
+        friendly_names =\
+            [(c.id, c.get_friendly_name()) for c in postcategories]
 
         self.fields['postcategory'].choices = friendly_names
         for field_name, field in self.fields.items():
