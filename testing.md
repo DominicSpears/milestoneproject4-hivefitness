@@ -297,6 +297,109 @@
   * Submits form and updates info
   * Result: pass 
 
+#### Shop Page
+
+1. Sort by dropdown
+  * Select option in the dropdown menu
+  * Products sorted by selected option
+  * Result: pass
+
+1. Product counter
+  * Number of products depending on category selected
+  * Result: pass
+
+1. Product management buttons
+  * If logged in as super user, management buttons available
+  * Result: pass
+
+1. Product edit button
+  * Click edit button
+  * Super user taken to edit product page
+  * Result: pass
+
+1. Product delete button
+  * Click delete button
+  * Product deleted
+  * Result: pass
+
+1. Back to top button
+  * Click back to top button
+  * Return user to top of the page
+  * Result: pass
+
+#### Product detail Page
+
+1. Product management buttons
+  * If logged in as super user, management buttons available
+  * Result: pass
+
+1. Product edit button
+  * Click edit button
+  * Super user taken to edit product page
+  * Result: pass
+
+1. Product delete button
+  * Click delete button
+  * Product deleted
+  * Result: pass
+
+1. Quantity selector
+  * Click add/minus button
+  * Adds/minus number of products to be added to bag
+  * Result: pass
+
+1. Keep shopping button
+  * Click keep shopping
+  * Returns user to all products page
+  * Result: pass
+
+1. Add to bag button
+  * Click add to bag
+  * Adds selected product/s to bag
+  * Success message appears with order summary and checkout button
+  * Result: pass
+
+#### Shopping bag
+
+1. Quantity plus/minus
+  * Click plus/minus then update
+  * Increases/decreases number of products
+  * Result: pass
+
+1. Remove button
+  * Click remove button
+  * Remove product from shopping bag
+  * Result: pass
+
+1. Keep shopping button
+  * Click keep shopping
+  * Returns user to all products page
+  * Result: pass
+
+1. Secure checkout button
+  * Click secure checkout
+  * User taken to checkout
+  * Result: pass
+
+#### Checkout 
+
+1. Checkout form
+  * Saved details appear automatically
+  * Result: pass
+
+1. Order summary  
+  * Lists all products added to bag
+  * Result: pass
+
+1. Adjust bag button
+  * Click adjust bag button
+  * User returned to shopping bag
+  * Result: pass
+
+1. Complete order button
+  * Click complete order
+  * Order finalised, confirmation email sent to customer email
+  * Result: pass
 
 #### Product Category Management Page
 
@@ -348,39 +451,21 @@
   * Submits form and updates info
   * Result: pass 
 
-#### Shop Page
+#### Profile Page
 
-1. Sort by dropdown
-  * Select option in the dropdown menu
-  * Products sorted by selected option
+1. Profile form
+  * Contains current user info if saved
   * Result: pass
 
-1. Product counter
-  * Number of products depending on category selected
+1. Update profile form button
+  * Fill in for with required info and click update
+  * New info saved to database
   * Result: pass
 
-1. Product management buttons
-  * If logged in as super user, management buttons available
+1. Order history
+  * Complete valid order
+  * Shows last order as well as all previous order information
   * Result: pass
-
-1. Product edit button
-  * Click edit button
-  * Super user taken to edit product page
-  * Result: pass
-
-1. Product delete button
-  * Click delete button
-  * Product deleted
-  * Result: pass
-
-1. Back to top button
-  * Click back to top button
-  * Return user to top of the page
-  * Result: pass
-
-
-
-
 
 
 <a name="user-story"></a>
