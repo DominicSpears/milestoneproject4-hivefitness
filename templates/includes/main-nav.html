@@ -22,14 +22,14 @@
                             <h6 class="mb-2">Categories</h6>
                             <hr class="menu-spacing">
                                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                                <!--{% for category in categories %}
+                                {% for category in categories %}
                                     <a href="{% url 'products' %}?category={{ category.name }}" class="dropdown-item">{{ category.name }}</a>
-                                {% endfor %}-->
-                                <a href="{% url 'products' %}?category=cardio" class="dropdown-item">Cardio</a>
+                                {% endfor %}
+                                <!--<a href="{% url 'products' %}?category=cardio" class="dropdown-item">Cardio</a>
                                 <a href="{% url 'products' %}?category=resistance" class="dropdown-item ">Resistance</a>
                                 <a href="{% url 'products' %}?category=accessories"
                                     class="dropdown-item ">Accessories</a>
-                                <a href="{% url 'products' %}?category=recovery" class="dropdown-item ">Recovery</a>
+                                <a href="{% url 'products' %}?category=recovery" class="dropdown-item ">Recovery</a>-->
                         </div>
                         <div class="col">
                             <hr>
