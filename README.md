@@ -596,14 +596,22 @@ if 'USE_AWS' in os.environ:
 
 #### Media
 
-##### Images
-* Recipe images were taken from the BBC food website.
-* Cookware images were taken from the Greenpan website, mayflower collection.
-* All other images were located via bing images, searched under "free to share and use" licences.
+##### General
+* Images for the homepage were taken from google images. 
 
-##### Content
-* Recipe content (ingredients, method, e.t.c.) was taken from the BBC food website.
-* Cookware content (prices, names e.t.c.) was taken from the the Greenpan cookware website.
+##### Blog Content
+* Images were taken from google images.
+
+* Blog content (articles, titles,, e.t.c.) were taken from various websites.
+  * [Recovery blog](https://www.polar.com/blog/workout-recovery-routine/)
+  * [Yoga blog](https://www.ekhartyoga.com/articles/wellbeing/yoga-and-chronic-illness)
+  * [Cardio blog](https://blog.ultimateperformance.com/gemma-atkinsons-training-blog-how-i-started-weight-training/)
+  * [Resistance blog](https://www.runtastic.com/blog/en/how-warming-up-improves-your-race-performance/)
+
+##### Shop Content
+* Images were taken from google images. 
+
+* Product content (prices, names e.t.c.) were taken from google images, via the image website links. 
 
 <a name="acknowledgements"></a>
 
