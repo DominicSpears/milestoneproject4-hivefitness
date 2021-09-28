@@ -13,14 +13,19 @@
 #### Solved Bugs
 
 1. 
-  * 
+
 
 <a name="remaining"></a>
 
 #### Remaining Bugs
 
-1. 
-  * 
+1. Blog article text
+  * Blog article does not include new paragraphs. 
+
+2. Homepage links
+  * Homepage links (about / contact us) create a blank blobk above the section when clicked.
+
+
 <a name="validator"></a>
 
 ### Validator Tests
@@ -240,8 +245,138 @@
 1. Contact us form (invalid message)
   * Fill in form without required info/message
   * Tooltip reveals which section needs filling out
+  * Result: 
+  
+#### Blog Category management Page
+
+1. Add post button
+  * Click add post button
+  * Super user taken to add post page
   * Result: pass
 
+1. Blog category edit button
+  * Click edit button
+  * Super user taken to edit post page
+  * Result: pass
+
+1. Blog category delete button
+  * Click delete button
+  * Blog category deleted
+  * Result: pass
+
+#### Blog Category Add Page
+
+1. Category Form
+  * Submit valid form with category info
+  * Category added to database
+  * Result: pass
+
+2. Cancel button
+  * Click cancel button
+  * Returns user to blog management page
+  * Result: pass 
+
+2. Add product category button
+  * Click add post category button
+  * Submits form and adds category to database
+  * Result: pass 
+
+#### Blog Category edit Page
+
+1. Category Form
+  * Form auto fils with category info
+  * Result: pass
+
+2. Cancel button
+  * Click cancel button
+  * Returns user to blog management page
+  * Result: pass 
+
+2. Update post category button
+  * Click update product category button
+  * Submits form and updates info
+  * Result: pass 
+
+
+#### Product Category Management Page
+
+1. Add product button
+  * Click add product button
+  * Super user taken to add product page
+  * Result: pass
+
+1. Product category edit button
+  * Click edit button
+  * Super user taken to edit product page
+  * Result: pass
+
+1. Product category delete button
+  * Click delete button
+  * Product deleted
+  * Result: pass
+
+#### Product Category Add Page
+
+1. Category Form
+  * Submit valid form with category info
+  * Category added to database
+  * Result: pass
+
+2. Cancel button
+  * Click cancel button
+  * Returns user to blog management page
+  * Result: pass 
+
+2. Add product category button
+  * Click add product category button
+  * Submits form and adds category to database
+  * Result: pass 
+
+#### Product Category Edit Page
+
+1. Category Form
+  * Form auto fils with category info
+  * Result: pass
+
+2. Cancel button
+  * Click cancel button
+  * Returns user to blog management page
+  * Result: pass 
+
+2. Update product category button
+  * Click update product category button
+  * Submits form and updates info
+  * Result: pass 
+
+#### Shop Page
+
+1. Sort by dropdown
+  * Select option in the dropdown menu
+  * Products sorted by selected option
+  * Result: pass
+
+1. Product counter
+  * Number of products depending on category selected
+  * Result: pass
+
+1. Product management buttons
+  * If logged in as super user, management buttons available
+  * Result: pass
+
+1. Product edit button
+  * Click edit button
+  * Super user taken to edit product page
+  * Result: pass
+
+1. Product delete button
+  * Click delete button
+  * Product deleted
+  * Result: pass
+
+1. Back to top button
+  * Click back to top button
+  * Return user to top of the page
+  * Result: pass
 
 
 
