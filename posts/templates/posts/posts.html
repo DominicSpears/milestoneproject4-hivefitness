@@ -20,7 +20,7 @@
 <div class="container">
     <div class="row mt-1 mb-2">
     </div>
-    <div class="row">
+    <div class="row p-3">
         <div class="col-12 col-md-4 blog-category-card">
             <div class="category-card-inner">
                 <h3 class="title-font text-center pt-2">Categories</h3>
@@ -28,7 +28,7 @@
                 <hr class="break-md">
                 <!--category for loops-->
                 {% for postcategory in postcategories %}
-                    <a class="text-center site-btn d-flex justify-content-center" href="{% url 'posts' %}?postcategory={{ postcategory.name }}">{{ postcategory.name }}</a>
+                    <a class="text-center site-btn d-flex justify-content-center" href="{% url 'posts' %}?postcategory={{ postcategory.friendly_name }}">{{ postcategory.friendly_name }}</a>
                 {% endfor %}
                 <a class="text-center site-btn d-flex justify-content-center" href="{% url 'posts' %}">All Posts</a>
                 <hr class="break-md">
