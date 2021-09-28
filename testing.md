@@ -472,7 +472,73 @@
 
 ### User Story Tests
 
-#### Site administrator
-1. As a site administrator, I want the ability to edit and delete all recipes, even if I didn't write them myself.
-  * To address this I added code that shows all recipes on the profile admin page, rather than just the recipes created by that user.
+#### Casual Visitor
+
+|As a/an           |I want to be able to                         |So that I can                                           |
+|------------------|---------------------------------------------|--------------------------------------------------------|
+|Casual Visitor    |Read information about the site              |Know what the site offers                               |
+|Casual Visitor    |Easily navigate the site                     |Access any specific tool or product                     |
+|Casual Visitor    |Regiter with the site                        |Become a user                                           |
+|Casual Visitor    |See all blog articles                        |Access the information provided                         |
+|Casual Visitor    |Contact the site administrators              |Report a problem/ request information                   |
+
+To address these stories:
+* I created an about us page that gives a bit of background about the site and what it has to offer.
+* I created a navigation menu that is fixed to the top of all pages.
+* I created a navigation menu that is fixed to the top of all pages.
+* I created all posts page, accessable to anyone, that shows a list of all current articles.
+* I created a contact us section of the hompage that links directly to the sites email address.
   * ![User Story 13](static/images/user-stories/userstory11.png)
+
+|As a/an           |I want to be able to                         |So that I can                                           |
+|------------------|---------------------------------------------|--------------------------------------------------------|
+|Shopper           |Access the shop from any page of the site    |Get to the shop easily                                  |
+|Shopper           |See a display of all products                |Scan through the site's full collection                 |
+|Shopper           |Click on a product                           |See extra information an a rating                       |
+|Shopper           |Search for products                          |Look for specific items                                 |
+|Shopper           |Narrow down the products by category         |See all items in a specfic genre                        |
+|Shopper           |Order the products by price/category/etc     |Easily search through a long list of items              |
+|Shopper           |Review my order in a checkout                |Check that my order is correct before confirmation      |
+
+To address these stories:
+* I created a fixed navigation menu that allows access to the shop link from any page.
+* I created an all products page that lists all current products on offer in the store.
+* I created a product detail page so that each product could be expaned and see all relevant information.
+* I created a searchbar that can filter through the list of current products to any relevant results.
+* I created a series of categories, with links to each category, to narrow down a customer search.
+* I created a selection of options for the customers to sort the orderr of products including price, name, category and rating.
+* I created a shopping bag and a checkout app, each of which allows the shopper to review their order.
+
+|As a/an           |I want to be able to                         |So that I can                                           |
+|------------------|---------------------------------------------|--------------------------------------------------------|
+|Registered User   |Save personal information                    |Enter it once only                                      |
+|Registered User   |See a profile page                           |Add or update my personal information                   |
+|Registered User   |See a list of previous orders                |Confirm what I have already purchased and when          |
+|Registered User   |Register my own login information            |Log into the site securely                              |
+|Registered User   |Get to associated social media sites         |Get further information/content                         |
+|Registered User   |Leave comments on any blog post              |Be part of the community discussion                     |
+
+To address these stories:
+* I created a profile page in which users can save their information. (As well as at the checkout)
+* I created a personal profile page with an information form that can be updated.
+* I created an order history that is included on the profile page.
+* I created a secure register and login page so that users can create an individual profile.
+* I created social media links, located in the footer, that open the site website on a new tab.
+* I added a comment system to the blog articles so that users can leave their opinions known. 
+
+|As a/an           |I want to be able to                         |So that I can                                           |
+|------------------|---------------------------------------------|--------------------------------------------------------|
+|Site administrator|Add, edit or delete products as required     |Maintain the online shop                                |
+|Site administrator|Manage the product categories                |Ensure the products can be easily searched/narrowed down|
+|Site administrator|Add, edit or delete post articles as required|Maintain the blog posts                                 |
+|Site administrator|Manage the post categories                   |Ensure the posts can be easily searched/narrowed down   |
+|Site administrator|See the number of comments on each post      |Indicate which posts are getting the most traffic       |
+|Site administrator|Edit or delete a blog comment                |Update mistakes or remove inappropriate content         |
+
+To address these stories:
+* I created product management buttons on the all products page and product detail page, to edit and delete products. As well as an indipended page to add products. 
+* I created a product category management page, where ategories can be added, edited or deleted as needed.
+* I created post management buttons on the all post page and post detail page, to edit and delete posts. As well as an indipended page to add posts.
+* I created a post category management page, where post categories can be added, edited or deleted as needed.
+* I created a comment counter that appear uner each article, so that the number of comments left is clear.
+* I created comment management buttons to edit or delete comments, for super users only.

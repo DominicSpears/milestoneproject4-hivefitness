@@ -2,12 +2,13 @@
 
 Welcome to Hive Fitness, a website for users all over the world buy top quality 
 fitness equipment in order to reach their training goals. It also includes a blog
-wgich is regularly updated with arlicles about a variety of fitness topics.  This 
+which is regularly updated with articles about a variety of fitness topics.  This 
 allows our customers to comment and discuss these topics with a community of like 
 minded people. Made for my Code Institute Milestone Project 4.
 
-Follow the link to [Hive Fitness](#deployed app url)
+Follow the link to [Hive Fitness](https://hive-fitness.herokuapp.com/)
 
+![](media/readme/readme.png)
 ![Responsive Example](#)
 
 ### Contents
@@ -272,7 +273,7 @@ I have created a test administrator and a test user in order for the features of
 
 |Username    |Password  |Email               |Role                |
 |------------|----------|--------------------|--------------------|
-|hiveadmin3  |q1w2e3r4  |testadmin@email.com |Super User (Admin)  |
+|hiveadmin2  |q1w2e3r4  |testadmin@email.com |Super User (Admin)  |
 |testuser1   |t1e2s3t4  |testuser@email.com  |User                |
 
 
@@ -418,8 +419,7 @@ management links for the blog and shop
 
 #### Future Features
 
-* I would like to be able to update the product categories and have that change 
-reflected in the navbar. Perhaps a context variable could be used to accomplish this. 
+* I would like users to be able to edit and delete their own comments as well as the super users being able to edit/delete any.
 
 * I would like to add a product review system so that users could leave specific 
 information about their experiance with a product. It would also increase the amount 
@@ -436,8 +436,6 @@ ___
 <a name="deploy"></a>
 
 ### Deployment
-
-<a name="deploy"></a>
 
 #### To deploy to heroku:
 
@@ -460,8 +458,8 @@ ___
 
 8. Comment out the current database in settings.py, add in the new database 'default': dj_database_url.parse("<your Postrgres database URL here>")
 
-|Key                 |Value                     |
-|--------------------|--------------------------|
+|Key                  |Value                     |
+|---------------------|--------------------------|
 |AWS_ACCESS_KEY_ID    |Your AWS Access key       |
 |AWS_SECRET_ACCESS_KEY|Your secret key           |
 |DATABASE_URL         |Your postgres Database URL|
