@@ -230,7 +230,7 @@ Technologies used to create the site:
 * [jQuery](https://jquery.com/)
   * the project uses **jQuery** as a templating engine to allow writing code similar to python syntax.
 * [Bootstrap](https://flask.palletsprojects.com/en/2.0.x/)
-  * the project uses **materialize** as a responsive front-end framework based on material design.
+  * the project uses **bootstrap** as a front-end framework based on responsive design.
 * [Font Awesome](https://fontawesome.com/) 
   * The project uses **Font Awesome Version 5.15.1** to add icons that aid aesthetics or provide social media links.
 * [Google Fonts](https://fonts.google.com/)
