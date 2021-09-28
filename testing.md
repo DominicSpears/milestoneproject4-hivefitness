@@ -141,7 +141,39 @@
   * User taken to shopping bag page
   * Result: pass
 
+#### Footer
 
+1. Quick link buttons
+  * Click each button
+  * User taken to relevant page or part of homepage
+  * Result: pass
+
+1. Social media links
+  * Click each link
+  * Opens relevant social media page on new tab
+  * Result: pass
+
+#### Home Page
+
+1. Feature card link buttons
+  * Click each button
+  * User taken to relevant page or part of homepage
+  * Result: pass
+
+1. Profile Feature card 
+  * If logged in, message and link related to profile page
+  * If logged out, message and link related to login page
+  * Result: pass
+
+1. Contact us form (valid message)
+  * Fill in form with required info/message
+  * Email sent to hivefitness92@gmail.com
+  * Result: pass
+
+1. Contact us form (invalid message)
+  * Fill in form without required info/message
+  * Tooltip reveals which section needs filling out
+  * Result: pass
 
 
 
