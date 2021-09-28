@@ -175,7 +175,7 @@
   * Tooltip reveals which section needs filling out
   * Result: pass
 
-#### Blog Page
+#### All Blogs Page
 
 1. Categories buttons
   * Click each button
@@ -205,6 +205,44 @@
   * Click read more button
   * User taken to article page
   * Result: pass
+
+#### Specific Blog Page
+
+1. Blog management buttons
+  * If logged in as super user, management buttons available
+  * Result: pass
+
+1. Blog edit button
+  * Click edit button
+  * Super user taken to edit post page
+  * Result: pass
+
+1. Blog delete button
+  * Click delete button
+  * Blog post deleted
+  * Result: pass
+
+1. Return button
+  * Click return button
+  * User taken to all posts page
+  * Result: pass
+
+1. Comments counter
+  * Add/delete a comment
+  * Comment counter goes up/down by 1
+  * Result: pass
+
+1. Comments form (valid message)
+  * Fill in form with required info/message
+  * Comment added to blog article
+  * Result: pass
+
+1. Contact us form (invalid message)
+  * Fill in form without required info/message
+  * Tooltip reveals which section needs filling out
+  * Result: pass
+
+
 
 
 
