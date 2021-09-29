@@ -66,6 +66,29 @@ body {
     padding: 20px;
 }
 
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
 /* -- Header -- */
 .header-main {
     background-color: rgb(51, 51, 51);
@@ -236,6 +259,42 @@ body {
     background-color: white;
     color: black;
     border: 2px solid black;
+}
+
+/* Blog Page */
+
+.blog-card {
+    background-color: rgb(255, 217, 0);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.blog-category-card {
+    background-color: rgb(255, 217, 0);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.category-card-inner {
+    background-color: white;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.blog-comment-card {
+    background-color: rgb(51, 51, 51);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.comments {
+    color: rgb(255, 217, 0);
+}
+
+/* Products */
+
+.card-img-top {
+    min-height: 250px;
 }
 
 /* -- Product Form -- */
@@ -477,62 +536,3 @@ input[name='q']::placeholder {
     height: 10rem; /* fixed header height*/
     margin: 10rem 0 0; /* negative fixed header height */
 }
-
-/* Blog Page */
-
-.blog-card {
-    background-color: rgb(255, 217, 0);
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.blog-category-card {
-    background-color: rgb(255, 217, 0);
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.category-card-inner {
-    background-color: white;
-    border-radius: 5px;
-    height: 100%;
-}
-
-.blog-comment-card {
-    background-color: rgb(51, 51, 51)
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.comments {
-    color: rgb(255, 217, 0);
-}
-
-/* Products */
-
-.card-img-top {
-    min-height: 250px;
-}
-
-/* Scrollbar */
-
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
-
