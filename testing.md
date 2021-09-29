@@ -15,6 +15,18 @@
 1. When not logged in, the edit and delete buttons were not present (as they should be) but their div was visible.
   * To address this I altered the location of the if statement to surround the whole div instead of just the contents.
 
+2. When adding a product category, the new category would not appear in the navbar for loop.
+  * To resolve this I added a contect processor to the products app, enabling the for loop to be seen on all pages.
+
+3. When on mobile screen sizes, the shop dropdown wouldn't fit on the screen.
+  * To address this I added the dropdown-menu-right attribute to the class.
+
+4. The footer content would allign on top of each other rather than side by side.
+  * To address this I added each section to a column of a container and set bootstrap responsive sizing.
+
+5. The images for the homepage were not appearing on the deployed site.
+  * To address this I altered the src to include the {{ MEDIA_URL }}, connecting to the new database.
+
 
 <a name="remaining"></a>
 
@@ -74,27 +86,27 @@
   * Reveals dropdown menu with calssification options
   * Result: pass
 
-5. Shop dropdown, all products button
+6. Shop dropdown, all products button
   * Click All products category button
   * User taken to all products page
   * Result: pass
 
-5. Shop dropdown, catgory button
+7. Shop dropdown, catgory button
   * Click any of the specific category buttons
   * User taken to products page, by category
   * Result: pass
 
-5. Shop dropdown, sort button
+8. Shop dropdown, sort button
   * Click any of the specific sort option buttons
   * User taken to products page, ordered by selected option
   * Result: pass
 
-5. Search products bar
+9. Search products bar
   * Type in selection
   * All relevant results show on products page
   * Result: pass
 
-5. Profile button
+10. Profile button
   * Click profile button
   * Reveals dropdown menu
   * If not logged in, reveal register and login options only 
@@ -102,259 +114,259 @@
   * If logged in as super user, reveal management options 
   * Result: pass
 
-5. Profile dropdown, register button
+11. Profile dropdown, register button
   * Click register button
   * User taken to register page
   * Result: pass
 
-5. Profile dropdown, login button
+12. Profile dropdown, login button
   * Click login button
   * User taken to login page
   * Result: pass
 
-5. Profile dropdown, profile button
+13. Profile dropdown, profile button
   * Click my profile button
   * User taken to their personal profile page
   * Result: pass
 
-5. Profile dropdown, logout button
+14. Profile dropdown, logout button
   * Click logout button
   * User taken to logout page
   * Result: pass
 
-5. Profile dropdown, manage product categories button
+15. Profile dropdown, manage product categories button
   * Click manage product categories button
   * Super user taken to manage product categories page
   * Result: pass
 
-5. Profile dropdown, add product button
+16. Profile dropdown, add product button
   * Click add product button
   * Super user taken to add product page
   * Result: pass
 
-5. Profile dropdown, manage post categories button
+17. Profile dropdown, manage post categories button
   * Click my manage post categories button
   * Super user taken to manage post categories page
   * Result: 
   
-5. Profile dropdown, add post button
+18. Profile dropdown, add post button
   * Click add post button
   * Super user taken to add post page
   * Result: pass
 
-5. Shopping bag button
+19. Shopping bag button
   * Click shopping bag button
   * User taken to shopping bag page
   * Result: pass
 
 #### Footer
 
-1. Quick link buttons
+20. Quick link buttons
   * Click each button
   * User taken to relevant page or part of homepage
   * Result: pass
 
-1. Social media links
+21. Social media links
   * Click each link
   * Opens relevant social media page on new tab
   * Result: pass
 
 #### Home Page
 
-1. Feature card link buttons
+22. Feature card link buttons
   * Click each button
   * User taken to relevant page or part of homepage
   * Result: pass
 
-1. Profile Feature card 
+23. Profile Feature card 
   * If logged in, message and link related to profile page
   * If logged out, message and link related to login page
   * Result: pass
 
-1. Contact us form (valid message)
+24. Contact us form (valid message)
   * Fill in form with required info/message
   * Email sent to hivefitness92@gmail.com
   * Result: pass
 
-1. Contact us form (invalid message)
+25. Contact us form (invalid message)
   * Fill in form without required info/message
   * Tooltip reveals which section needs filling out
   * Result: pass
 
 #### All Blogs Page
 
-1. Categories buttons
+26. Categories buttons
   * Click each button
   * Reveal relevant blog articles
   * Result: pass
 
-1. All posts buttons
+27. All posts buttons
   * Click all posts button
   * User taken to all posts page 
   * Result: pass
 
-1. Blog management buttons
+28. Blog management buttons
   * If logged in as super user, management buttons available
   * Result: pass
 
-1. Blog edit button
+29. Blog edit button
   * Click edit button
   * Super user taken to edit post page
   * Result: pass
 
-1. Blog delete button
+30. Blog delete button
   * Click delete button
   * Blog post deleted
   * Result: pass
 
-1. Blog read more button
+31. Blog read more button
   * Click read more button
   * User taken to article page
   * Result: pass
 
 #### Specific Blog Page
 
-1. Blog management buttons
+32. Blog management buttons
   * If logged in as super user, management buttons available
   * Result: pass
 
-1. Blog edit button
+33. Blog edit button
   * Click edit button
   * Super user taken to edit post page
   * Result: pass
 
-1. Blog delete button
+34. Blog delete button
   * Click delete button
   * Blog post deleted
   * Result: pass
 
-1. Return button
+35. Return button
   * Click return button
   * User taken to all posts page
   * Result: pass
 
-1. Comments counter
+36. Comments counter
   * Add/delete a comment
   * Comment counter goes up/down by 1
   * Result: pass
 
-1. Comments form (valid message)
+37. Comments form (valid message)
   * Fill in form with required info/message
   * Comment added to blog article
   * Result: pass
 
-1. Contact us form (invalid message)
+38. Contact us form (invalid message)
   * Fill in form without required info/message
   * Tooltip reveals which section needs filling out
   * Result: 
   
 #### Blog Category management Page
 
-1. Add post button
+39. Add post button
   * Click add post button
   * Super user taken to add post page
   * Result: pass
 
-1. Blog category edit button
+40. Blog category edit button
   * Click edit button
   * Super user taken to edit post page
   * Result: pass
 
-1. Blog category delete button
+41. Blog category delete button
   * Click delete button
   * Blog category deleted
   * Result: pass
 
 #### Blog Category Add Page
 
-1. Category Form
+42. Category Form
   * Submit valid form with category info
   * Category added to database
   * Result: pass
 
-2. Cancel button
+43. Cancel button
   * Click cancel button
   * Returns user to blog management page
   * Result: pass 
 
-2. Add product category button
+44. Add product category button
   * Click add post category button
   * Submits form and adds category to database
   * Result: pass 
 
 #### Blog Category edit Page
 
-1. Category Form
+45. Category Form
   * Form auto fils with category info
   * Result: pass
 
-2. Cancel button
+46. Cancel button
   * Click cancel button
   * Returns user to blog management page
   * Result: pass 
 
-2. Update post category button
+47. Update post category button
   * Click update product category button
   * Submits form and updates info
   * Result: pass 
 
 #### Shop Page
 
-1. Sort by dropdown
+48. Sort by dropdown
   * Select option in the dropdown menu
   * Products sorted by selected option
   * Result: pass
 
-1. Product counter
+49. Product counter
   * Number of products depending on category selected
   * Result: pass
 
-1. Product management buttons
+50. Product management buttons
   * If logged in as super user, management buttons available
   * Result: pass
 
-1. Product edit button
+51. Product edit button
   * Click edit button
   * Super user taken to edit product page
   * Result: pass
 
-1. Product delete button
+52. Product delete button
   * Click delete button
   * Product deleted
   * Result: pass
 
-1. Back to top button
+53. Back to top button
   * Click back to top button
   * Return user to top of the page
   * Result: pass
 
 #### Product detail Page
 
-1. Product management buttons
+54. Product management buttons
   * If logged in as super user, management buttons available
   * Result: pass
 
-1. Product edit button
+55. Product edit button
   * Click edit button
   * Super user taken to edit product page
   * Result: pass
 
-1. Product delete button
+56. Product delete button
   * Click delete button
   * Product deleted
   * Result: pass
 
-1. Quantity selector
+57. Quantity selector
   * Click add/minus button
   * Adds/minus number of products to be added to bag
   * Result: pass
 
-1. Keep shopping button
+58. Keep shopping button
   * Click keep shopping
   * Returns user to all products page
   * Result: pass
 
-1. Add to bag button
+59. Add to bag button
   * Click add to bag
   * Adds selected product/s to bag
   * Success message appears with order summary and checkout button
@@ -362,108 +374,108 @@
 
 #### Shopping bag
 
-1. Quantity plus/minus
+60. Quantity plus/minus
   * Click plus/minus then update
   * Increases/decreases number of products
   * Result: pass
 
-1. Remove button
+61. Remove button
   * Click remove button
   * Remove product from shopping bag
   * Result: pass
 
-1. Keep shopping button
+62. Keep shopping button
   * Click keep shopping
   * Returns user to all products page
   * Result: pass
 
-1. Secure checkout button
+63. Secure checkout button
   * Click secure checkout
   * User taken to checkout
   * Result: pass
 
 #### Checkout 
 
-1. Checkout form
+64. Checkout form
   * Saved details appear automatically
   * Result: pass
 
-1. Order summary  
+65. Order summary  
   * Lists all products added to bag
   * Result: pass
 
-1. Adjust bag button
+66. Adjust bag button
   * Click adjust bag button
   * User returned to shopping bag
   * Result: pass
 
-1. Complete order button
+67. Complete order button
   * Click complete order
   * Order finalised, confirmation email sent to customer email
   * Result: pass
 
 #### Product Category Management Page
 
-1. Add product button
+68. Add product button
   * Click add product button
   * Super user taken to add product page
   * Result: pass
 
-1. Product category edit button
+69. Product category edit button
   * Click edit button
   * Super user taken to edit product page
   * Result: pass
 
-1. Product category delete button
+70. Product category delete button
   * Click delete button
   * Product deleted
   * Result: pass
 
 #### Product Category Add Page
 
-1. Category Form
+71. Category Form
   * Submit valid form with category info
   * Category added to database
   * Result: pass
 
-2. Cancel button
+72. Cancel button
   * Click cancel button
   * Returns user to blog management page
   * Result: pass 
 
-2. Add product category button
+73. Add product category button
   * Click add product category button
   * Submits form and adds category to database
   * Result: pass 
 
 #### Product Category Edit Page
 
-1. Category Form
+74. Category Form
   * Form auto fils with category info
   * Result: pass
 
-2. Cancel button
+75. Cancel button
   * Click cancel button
   * Returns user to blog management page
   * Result: pass 
 
-2. Update product category button
+76. Update product category button
   * Click update product category button
   * Submits form and updates info
   * Result: pass 
 
 #### Profile Page
 
-1. Profile form
+77. Profile form
   * Contains current user info if saved
   * Result: pass
 
-1. Update profile form button
+78. Update profile form button
   * Fill in for with required info and click update
   * New info saved to database
   * Result: pass
 
-1. Order history
+79. Order history
   * Complete valid order
   * Shows last order as well as all previous order information
   * Result: pass
