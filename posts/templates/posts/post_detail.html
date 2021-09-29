@@ -42,7 +42,7 @@
                                 <small>{{ comments.count }} comments</samll>
                                 <h4 class="title-font">Comments</h4>
                                 {% for comment in comments %}
-                                    <div class="comments blog-card my-1 pb-3">
+                                    <div class="comments blog-comment-card my-1 pb-3">
                                         <p>{{ comment.name }} | <span class=" text-muted">{{ comment.created_on }}</span></p> 
                                         <p>{{ comment.body | linebreaks }}</p>
                                         {% if request.user.is_superuser %}

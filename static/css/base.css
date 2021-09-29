@@ -498,8 +498,14 @@ input[name='q']::placeholder {
     height: 100%;
 }
 
+.blog-comment-card {
+    background-color: rgb(51, 51, 51)
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .comments {
-    color: rgb(51, 51, 51);
+    color: rgb(255, 217, 0);
 }
 
 /* Products */
